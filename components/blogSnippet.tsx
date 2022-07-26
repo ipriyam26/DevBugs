@@ -8,10 +8,12 @@ function BlogSnippets(props: { blog: Blog }) {
   const {blog} = props;
 
   return (
-    <div className='space-y-1'>
-      {/* <Link> */}
-        <h4 className=' font-semibold text-lg text-bkdblue-500 '>{blog.title.toUpperCase()}</h4>
-      {/* </Link> */}
+    <div className='space-y-1  '>
+      <Link href={`blogpost/slug=${blog.slug}`}>
+        <a href={`blogpost/slug=${blog.slug}`}>
+          <h4 className=' font-semibold text-lg text-bkdblue-500 '>{blog.title.toUpperCase()}</h4>
+        </a>
+      </Link>
         <div className='flex space-x-5 text-base'>
 
         <p> <strong className='text-gray-700 '>Author: </strong> {blog.author}</p>

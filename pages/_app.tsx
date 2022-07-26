@@ -18,7 +18,7 @@ document.body.style.background = '#FBEAEB';
             <Link href="/about">About</Link>
           </li>
           <li>
-            <Link href="/blogs">Blog</Link>
+            <Link href="/blogpost">Blog</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>
