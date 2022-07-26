@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <title>Home</title>
       </Head>
       <div className="md:mt-14 md:space-y-10 sm:mt-5 sm:space-y-5">
-        <h1 className="text-5xl font-sans font-medium text-center">Dev Bugs</h1>
+        <h1 className="text-5xl font-sans text-bkdblue-500 font-medium text-center">Dev Bugs</h1>
         <div className=" text-center">
           <Image
             src={coder}
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         <p className=" text-sans font-medium text-xl md:mx-52 sm:mx-6">{desc}</p>
       </div>
       <div className="md:mt-10 md:mx-52 space-y-6 sm:mx-6 sm:mt-5 ">
-        <h2 className=" text-3xl font-sans font-medium">
+        <h2 className=" text-3xl text-bkdblue-500 font-sans font-medium">
           Recent Blogs
         </h2>
 <ul className=" md:space-y-6 mx-10 sm:space-y-5 my-5">

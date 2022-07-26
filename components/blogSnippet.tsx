@@ -10,7 +10,7 @@ function BlogSnippets(props: { blog: Blog }) {
   return (
     <div className='space-y-1'>
       {/* <Link> */}
-        <h4 className=' font-semibold text-lg  '>{blog.title.toUpperCase()}</h4>
+        <h4 className=' font-semibold text-lg text-bkdblue-500 '>{blog.title.toUpperCase()}</h4>
       {/* </Link> */}
         <div className='flex space-x-5 text-base'>
 
@@ -18,6 +18,7 @@ function BlogSnippets(props: { blog: Blog }) {
         <p> <strong className='text-gray-700 '>Date: </strong> {blog.date}</p>
         </div>
         <p className=' text-gray-500 text-lg' >{blog.description.slice(0,200)}...</p>
+        <br  />
     </div>
   )
 }
