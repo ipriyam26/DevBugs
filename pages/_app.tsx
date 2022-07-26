@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </nav>
 
   <Component {...pageProps} />
+
   </>
     );
 }

@@ -1,0 +1,8 @@
+{
+    "title":"how to code in java",
+    "description":"All Java programs are written in plain text — therefore you don't need any special software. For your first program, open up the simplest text editor you have on your computer, likely Notepad. The entire program looks like this: While you could cut and paste the above code into your text editor, it’s better to get into the habit of typing it in. It will help you learn Java more quickly because you will get a feel for how programs are written, and best of all, you will make mistakes! This may sound odd, but each mistake you make helps you to become a better programmer in the long run. Just remember that your program code must match the example code, and you’ll be fine. Note the lines with  to the console.Another example of a console program is the Java compiler called This is the program that will read the code in the HelloWorld.java file, and translate it into a language your computer can understand. This process is called compiling. Every Java program you write will have to be compiled before it can be run. To run javac from the terminal window, you first need to tell your computer where it is. For example, it might be in a directory called If you don’t have this directory, then do a file search in Windows Explorer for  to find out where it lives. Once you’ve found its location, type the following command into the terminal window: E.g., Press Enter. The terminal window will just return to the command prompt. However, the path to the compiler has now been set.",
+    "date":"2020-01-01",
+    "author":"John Doe",
+    "tags":["java","programming","coding"],
+    "slug":"how-to-code-in-java"
+}
