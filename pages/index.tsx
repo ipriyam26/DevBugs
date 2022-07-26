@@ -20,6 +20,7 @@ const Home: NextPage = () => {
   }
   useEffect(() => {
     getBlogs();
+
   }, []);
 
 
