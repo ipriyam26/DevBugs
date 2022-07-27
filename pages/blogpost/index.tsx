@@ -19,7 +19,7 @@ function Blog() {
     <div className='  space-y-10 ' >
         <h1 className=' text-4xl text-bkdblue-500 mt-10 text-center font-bold' >Blogs</h1>
         
-        <ul className=" mx-7 my-5 text-center md:text-start md:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:space-x-8">
+        <ul className=" mx-7 my-5 text-center md:text-start md:grid md:grid-cols-2 xl:grid-cols-3 ">
 {
   blogs.map((blog,index) =>{
     return(

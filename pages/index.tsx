@@ -39,7 +39,7 @@ const Home: NextPage = () => {
             width={518 * 1.5}
           ></Image>
         </div>
-        <p className=" text-sans font-medium text-xl mx-5 text-center">
+        <p className=" text-sans font-medium text-xl mx-5 text-center lg:mx-36">
           {desc}
         </p>
       </div>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
           Recent Blogs
         </h2>
 
-        <ul className=" mx-10 my-5 text-center md:text-start md:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:space-x-8">
+        <ul className=" mx-10 my-5 text-center md:text-start md:grid md:grid-cols-2 xl:grid-cols-3  ">
           {blogs.map((blog, index) => {
             return <BlogSnippets key={index} blog={blog}></BlogSnippets>;
           })}

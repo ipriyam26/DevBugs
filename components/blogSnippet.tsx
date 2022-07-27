@@ -20,7 +20,7 @@ function BlogSnippets(props: { blog: Blog }) {
           <p> <strong className='text-gray-700 '>Date: </strong> {blog.date}</p>
           </div>
 
-        <p className=' text-gray-500 sm:mx-25 lg:mx-0' >{blog.description.slice(0,200)}...</p>
+        <p className=' text-gray-500 sm:mx-25 ' >{blog.description.slice(0,200)}...</p>
         <br  />
     </div>
   )
