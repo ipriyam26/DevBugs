@@ -15,14 +15,12 @@ const Home: NextPage = () => {
 
   const getBlogs = async () => {
     const res = await fetch("/api/blogs");
-    const data:Blog[] = await res.json();
+    const data: Blog[] = await res.json();
     setBlogs(data);
-  }
+  };
   useEffect(() => {
     getBlogs();
-
   }, []);
-
 
   return (
     <>
@@ -30,33 +28,31 @@ const Home: NextPage = () => {
         <title>Home</title>
       </Head>
       <div className="mt-10 space-y-10 ">
-
-        <h1 className="text-5xl font-sans text-bkdblue-500 font-medium text-center">Dev Bugs</h1>
+        <h1 className="text-5xl font-sans text-bkdblue-500 font-medium text-center">
+          Dev Bugs
+        </h1>
         <div className=" text-center mx-5">
           <Image
             src={coder}
             alt="Image of a coder"
-            height={345*1.5}
-            width={518*1.5}
+            height={345 * 1.5}
+            width={518 * 1.5}
           ></Image>
         </div>
-        <p className=" text-sans font-medium text-xl mx-5 text-center">{desc}</p>
+        <p className=" text-sans font-medium text-xl mx-5 text-center">
+          {desc}
+        </p>
       </div>
-      <div className=" my-5 space-y-6 ">
+      <div className=" my-5 space-y-6 lg:space-y-10 lg:my-9">
         <h2 className=" text-3xl text-bkdblue-500 text-center font-sans font-medium">
           Recent Blogs
         </h2>
-<ul className=" space-y-6 mx-10 my-5">
-{
-  blogs.map((blog,index) =>{
-    return(
-    <BlogSnippets key={index} blog={blog}></BlogSnippets>
-    )
-  }
-    )
 
-}
-</ul>
+        <ul className=" mx-10 my-5 text-center md:text-start md:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:space-x-8">
+          {blogs.map((blog, index) => {
+            return <BlogSnippets key={index} blog={blog}></BlogSnippets>;
+          })}
+        </ul>
       </div>
     </>
   );

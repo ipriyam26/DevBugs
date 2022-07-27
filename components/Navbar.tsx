@@ -22,7 +22,7 @@ setExpanded(!expanded);
 
   return (
   <>
-  <nav className="hidden lg:bg-bkdblue-500 lg:shadow-slate-700 lg:drop-shadow-md ">
+  <nav className="lg:visible lg:bg-bkdblue-500 lg:shadow-slate-700 lg:drop-shadow-md ">
     <ul className="flex justify-center space-x-20 font-sans font-medium py-2 text-2xl text-bkpink-100 ">
       <li>
         <Link href="/">Home</Link>
@@ -39,7 +39,7 @@ setExpanded(!expanded);
     </ul>
   </nav>
   
-  <nav className=' bg-bkdblue-500 text-center text-xl font-semibold text-bkpink-100 py-1' >
+  <nav className=' bg-bkdblue-500 text-center text-xl font-semibold text-bkpink-100 py-1 lg:hidden' >
     <div className='flex justify-between mx-4'>
       <div className='ml-4' ></div>
       {/* <Image src={logo} height={30} width={30} alt="logo"></Image> */}
