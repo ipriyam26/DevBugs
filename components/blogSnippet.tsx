@@ -9,7 +9,7 @@ function BlogSnippets(props: { blog: Blog }) {
 
   return (
     <div className='space-y-1'>
-
+      
         <Link href={`blogpost/slug=${blog.slug}`}>
           <a href={`blogpost/slug=${blog.slug}`}>
             <h4 className=' font-semibold text-lg text-bkdblue-500 '>{blog.title.toUpperCase()}</h4>

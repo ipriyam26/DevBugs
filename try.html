@@ -1,0 +1,1920 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        
+            <title>The C Beginner&#39;s Handbook: Learn C Programming Language basics in just a few hours</title>
+        
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+            <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:wght@400;700&display=swap">
+        
+
+        
+        
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css" />
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css"></noscript>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css" />
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css"></noscript>
+
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup-templating.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-bash.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-c.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-clojure.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-cpp.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-csharp.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-css.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-docker.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-elixir.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-erlang.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-git.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-go.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-graphql.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-haskell.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-java.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-javascript.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-json.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-jsx.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-kotlin.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-lua.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-php.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-python.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-r.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-ruby.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-rust.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-scala.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-sql.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-swift.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-typescript.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-yaml.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-dart.min.js"></script>
+
+
+
+        
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/news/assets/css/global-26e2f3cde9.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/screen-8a557108e9.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/search-bar-124f5f949c.css" />
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch-3-33-0/algoliasearch.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete-0-36-0/autocomplete.min.js"></script>
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/dayjs.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/localizedFormat.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/relativeTime.min.js"></script>
+
+        
+        
+            <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/locale/en.min.js"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",(()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")})),document.addEventListener("DOMContentLoaded",(()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",(e=>{i=e.target.value})),o.addEventListener("submit",(e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()}));const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No tutorials found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",((e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)}));document.addEventListener("click",(e=>{e.target!==s&&l.autocomplete.close()}))})),document.addEventListener("DOMContentLoaded",(()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")}));const notAuthenticated=!document.cookie.split(";").some((e=>e.trim().startsWith("jwt_access_token="))),notDonor=!document.cookie.split(";").some((e=>e.trim().startsWith("isDonor=true")));</script>
+
+        
+        
+    
+        <script
+            data-ad-client="ca-pub-9482786369113753"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            crossorigin="anonymous"
+            async
+        ></script>
+        <script defer src="/news/assets/js/toggle-ad-layout-dbb6ee71be.js"></script>
+    
+
+
+        
+        
+    <script defer src="/news/assets/js/fitvids-5d12072cbf.js"></script>
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelector(".post-full-content");t&&fitVids(t)}));</script>
+
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/the-c-beginners-handbook/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    <link rel="amphtml" href="https://www.freecodecamp.org/news/the-c-beginners-handbook/amp/">
+    <meta name="description" content="This C Beginner&#39;s Handbook follows the 80/20 rule. You&#39;ll learn 80% of the C programming language in 20% of the time. This approach will give you a well-rounded overview of the language. This handbook does not try to cover everything under the sun related to C. It focuses on the">
+
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The C Beginner&#39;s Handbook: Learn C Programming Language basics in just a few hours">
+    
+        <meta property="og:description" content="This C Beginner&#39;s Handbook follows the 80/20 rule. You&#39;ll learn 80% of the C programming language in 20% of the time. This approach will give you a well-rounded overview of the language. This handbook does not try to cover everything under the sun related to C. It focuses on the">
+    
+    <meta property="og:url" content="https://www.freecodecamp.org/news/the-c-beginners-handbook/">
+    <meta property="og:image" content="https://www.freecodecamp.org/news/content/images/2021/06/coverc-1-opt.jpg">
+    <meta property="article:published_time" content="2020-03-09T11:50:52.000Z">
+    <meta property="article:modified_time" content="2022-02-24T18:37:28.000Z">
+    
+        <meta property="article:tag" content="C Programming">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The C Beginner&#39;s Handbook: Learn C Programming Language basics in just a few hours">
+    
+        <meta name="twitter:description" content="This C Beginner&#39;s Handbook follows the 80/20 rule. You&#39;ll learn 80% of the C programming language in 20% of the time. This approach will give you a well-rounded overview of the language. This handbook does not try to cover everything under the sun related to C. It focuses on the">
+    
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/the-c-beginners-handbook/">
+    <meta name="twitter:image" content="https://www.freecodecamp.org/news/content/images/2021/06/coverc-1-opt.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Flavio Copes">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="C Programming">
+    <meta name="twitter:site" content="@freecodecamp">
+    
+
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="310">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.freecodecamp.org/news/content/images/2021/06/coverc-1-opt.jpg",
+		"width": 600,
+		"height": 310
+	},
+	"url": "https://www.freecodecamp.org/news/the-c-beginners-handbook/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"datePublished": "2020-03-09T11:50:52.000Z",
+	"dateModified": "2022-02-24T18:37:28.000Z",
+	"keywords": "C Programming",
+	"description": "This C Beginner&#x27;s Handbook follows the 80/20 rule. You&#x27;ll learn 80% of the C\nprogramming language in 20% of the time.\n\nThis approach will give you a well-rounded overview of the language.\n\nThis handbook does not try to cover everything under the sun related to C. It\nfocuses on the core of the language, trying to simplify the more complex topics.\n\nAnd note: You can get a PDF and ePub version of this C Beginner&#x27;s Handbook here\n[https://flaviocopes.com/page/c-handbook/].\n\nEnjoy!\n\nTable of Contents\n",
+	"headline": "The C Beginner&#x27;s Handbook: Learn C Programming Language basics in just a few hours",
+	"author": {
+		"@type": "Person",
+		"name": "Flavio Copes",
+		"url": "https://www.freecodecamp.org/news/author/flavio/",
+		"sameAs": [],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://www.freecodecamp.org/news/content/images/2021/05/flavio-copes-gravatar.jpeg",
+			"width": 250,
+			"height": 250
+		}
+	}
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+<!-- Web Monetization (https://webmonetization.org/) -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- end Web Monetization -->
+
+
+<!-- GAP -->
+<script>
+  Function("9!E$QV^T\x3cZaAySX)5`_q)5AiNtR{JsdDScjiC\\]Rb{\x3cj1'A4=_3UvOGN7{HU\"FJ+ML5\\,,1kN)y$5GM@-^Q5'kT!&l8`)'\x3cABVYg'@?CBum3`F{+3R5mcS A3^0Y$M^\\Ocoo#]u4M#avEJJ#0%,$0XwE>cFBnP]D5f8$C,),!T0D\x3cMCS>gQLs\x3ca#ME>k757wLo}Y3JyM$g@i\"Fg60R:n`>@#Lk#[*ML].PU+-Py5ME>k757w=mEq$gCW9dUBx^uLH{bv>$5$v%,q'eMz/jQ1yJ^4GEPiO>5i'n0U3GdMSuW=XUa//GF'C9$p(^VM*IAS2dQT.\\a+5U8iF(L&9\"\x3cb36L@=^Y3%D^*&=DxH@@-=g;q|v9\x3cSj M6kPa'U4^\x3c,2r9^HU\x3cVT@;sWi-O.4MO=i-5estn+L#OjC.[DCqUE/&W^i=//-/u5P#?MVSg B3QT8'O8h)1&iLb$m4MeQ.iX@s`}_6\\BoG^^{zg\"V,WZe;#D2i&e+/Tpd;7(rvkDg'@QN>gF3yJ\\//G(p.)(vwn*S5edE>cFBnP]LH[,j:I9e%w#$#@U]zZWXs|}P5{8)/(7I!m0PxN X{nS3-aa+4O;m+(C-LgX[AGCM0iKgsjxM\x3cV'mF2^xlgy\"xg?C-{RZsB\\+H]/)886l9^Eq|gJD7\\W6CrsJ*l9c1)7,:%0svGC@;GHAtVa)&4/h11*w9\";n\x3ceSzH%jXj|TR3E6g)&(,@Wxtohki5dF/yJ^4MP8j\x3c2&s}$>tB[ex?VULt|aR(E:@675mvl^`a\x3cKDOZjgnGu5EdT8c^22}^,N)CbcI$cMB|T!&l2`6*7l>*yk9aMz;#J3y&]:3I+nh\x3coe ^DL>[k_P|m\\B|,5ML+i/7+-wh0m+\x3cP]*2qXh|X_\"z))4(1k'aWH>deZ?VULq|R!\"=_#4O+e&!#n1WJk1VVTjjoSAgM!LI2Alt,H\"@vDFRjKwFc;3ND+G^^s?e#UzOF\\SX 4zOR:*O4#-M1-.k#[*ML].420oFR:MG+ou:1T%h.L'OW#.hF@nQc53f+'6J?\"t!kI}@ASU\\HBUS^:0T?k-p),v\"HU\x3csYD7jP3wBQ2&xE+R&2rwb%\\'\x3c@K./b\\$^y2\\F;i+7,s!!#q#eRfDkD@%Sy5\\CL`R1J?z_DfxWZ^X2 i-Od2-{a8N5^Ssc#J)gED=DZ\x3cUS^6&R:tj(6g%b.[$MdDScjU#]e5*DD+c^^vPo-PwYlw;#F=sGX-6R']4(J-%^2\\'IYN+_H1yyTP0R/b11$pU^1J'DNS8g{=1Pa/(I4\\4h(xK_3UvOGN7{jIwFc;3NDjT*(xPhJNxOvE>cFBnP]LH[8`\x3c85r1hJ]tGSDFrm=wJV//A2N-7[s?l#[RJjR.i{4zOR:*O4#\x3cJ>vvm3Y#YC:7R B$^*\x3c\"RDdc92muwLfPvRk?VOCjkda\x3cE4p5(5ese#!+JGCG%biBU{+/U3`:$%pv82sxISL.gD0qF)5ME4p5(5ese#qvJLE2\\X@fC[+YV5d,AQ%N62svJLE2\\X@fC[+^TR^71)mxn0HuGCw8#F=sGX-6R']4(@?z8D\\ARPH=VE:j|e5*DD+G^^x?p0P)\x3c@K.4WZ|SX:\"B2``92muwL$PvMk@gLBfC[+=\\5)?5,xr[*L?PjU*aX3BU{\x3c\"L;`D?22)Z*\\xbve>#J3y|cR(E:wD2Okvm:cyPLB=^R\x3c-hj8&T;m6A(_!V;q*gQD=2WZxFcB=ORn-7?\"wn,J)DMMOijIwFc;3ND`#1 A'vE\")MWZvWM3hU{*&F/i-q5s#^0[.aCi7!XU$DP:$HLoO>@vvm3Y#VMA3ZFB?Fy53I-d6$/Hvl!Y|KRN;/RXtSX-*N'gm(7>z8$\\#>RH8ciU\"ST:6R4y7O9e}n#dMJjF.i\"=3HT:YF;i+7,s!!Eb2eMQ2\\L\x3cfMB+5x/:.81g'b-U;OeZ;ZWCwOm+zN#8\x3c@[s?l#[RJjR.i{4zOR:*O4#-J>vvm3Y#YC\\Frm4BGd4$T/j6I(-.k#[*ML^.#K/x0f4oR5k-57}9y{FwP^fMyi:-FyF ?*pHM>zre3LMISK5!H\x3czNT8\"B2``BR#:%=u\x3cXhRdBDBmm_58fV'YSJ0u6$\\#>RH8ci3.\\U53f\x3c\\:A1AA%2$DpsvW(tc5rM+ML+i/7+?!5#s!@LF=]|\x3c0jv:\\f:8s$7l?b+\\!aR=.#F6fS25%EeoN1J0D-OwLjtp\\(jUA{ W=Tb9dRZ?%^2\\'I\\E>cFBnP]L&gAm-78v!w4V|?\\md2 3+eu+\\nM'\x3c^ne'aJP\"PJe=SWjC} ZKfV-ZWY6C.L|>@eb\x3c|mBB.P:)l/h=/IxomZ%QjoiZ'wb9w(]OwM'N7!A'7Z%Doe{e3qK$kea'U4^\x3c,2r9^HU?OeZ?dL2%o,a\\TJ!N7^5:%2%C_be.2EBtBu+Hl8`8/$gv!KBP8gaV!cN.h*,0RLq)5Av=hHP?PyCOcjXf|]+8^em:$\x3c,v'*L#BRGP!Fijm[+/G:cR/^y9^JSxIES1|m4Boy9\\n_^SNABA4EHn>;zOkR7i_}PUrPmc)^,\"6DZPaGz.PF+3DW'3#5_-b7,A\"E%Lo{HT*zfn}%X^IQ0Y[,BE/[P@mrw[( iBJ.TYoM&\x3cK/-M)[m$^rqR+uU*u#^0cZ/Rt7vzg%syMMLj]D@HPS+GRb.]`5/F2VYQjm|; v_?S-T^RO/\\[U7:\"HSPPdSe%\"A?Gv_7A8y>^$2{h'U;[^fbgHBzS]D5|T:>O5i#e}Jxak;V$JX'loMYA:j*I9-0%.$yPLB=^R\x3c-FvA3E:p:1Ih9^Em\x3cd+@=]o4qP^8G$'o-O1s*!EtKopD\\|jQx^y.\\F;i+7,s!!#n0MCS>gQLRBc.MF2j75IR(f L'g+ !T6mK&Nmm4iBksKi:'2VfOPH7\\i_;hlP:{,p6&7m\"gDL?IhSPpY/w_aP0{6#6JMmN!0$$eDT7XW7tOuM\x3cV'mF(^v\x3c6M}Fjqs\\-r_@ST:6R4y-^ne'aJP\"PJe.SHjC} YKoB`OMI,9^z$xd+@=]o7rV[L&>+9d_X0G*:L\x3cb\x3cDe3!]9h-b]nM*;@J?%^2\\'I\\E>cFBnP]L&j4$C)2v9o}Y3Oy:&!Ui5za`&l2`6*7l7}2s%PQGOZoAzCb:3I4bN5Mv\x3c6Op;klg7{jjCovMHyM6:(7y%g\x3c[AEMH7{c['hlL7f+&NNRAN6#s|IBDADIT' oM^`cZ''8A33>kr:BTdujW-U.:MJ5d6IC03\"Gg>[v_I|l6-JuMHj4$R,J#=`YM*IAS2dQTjhj8&T;m6A&s!l-SxgCQ;dUZhB[2GC5i;2/i=^Ed?=yE>cFBnP]L&j4'\x3cJ>zrk\x3cYP@jB>gU3sUC'3G+oR2^i?m}Yz@Ri22QJ#Sy;\\TBw7M$Awn,J)DMMOZm\x3c.\\U53f\x3c\\:A7A.vHYPihNdDE8jDcR&N:m1(6,!\"WYOJjK.cJBmzaOJgAq)5AmNhwYpeSz2Pq+1B,/zo#6\x3c|8aNeDL?Ph@PrU3yVa4?TC#-M>g(k0L#O2@;\\HB?\\V+5x,p6&7m\"gDn0MCS>gQLn^lP5A8b-7[!x^2!yPLB=^R\x3c-hj8&T;m6A8#0%1Yv JD6ZQB?\\V+5x,p6&7m\"gDn0MCS>gQLz^lP1A:c`>*i'3$\\#>RH8ciU\"ST:6R4y)O2vz`'UtG%D=#D>uMhL5H/nOO6pz\\#m\x3cgK@9{i4zOR:*O4#-J>vvm3Y#YLcMg iBF.4YTJ!7^^Av82!xXefFr`U3QP:)y8`\x3c85r1_3UvOGN7{jIiF[+5ED`T&8v%^,[g\x3cPF.im2jMT:&^+)\x3c$5kvmHKxGCS.sHZxSRi-E3`67Mhve#[xYCk9VW6$^y3\\F;i+7,s!!#q#bYS;n^@jUd8/^+#6J@grm!O;@eZ0{HU$^y=\\F;i+7,s!!#q#bYS;n^7kgo,6N)o121&N62`%@MEGZj@jUd8/^+#6J\\mw!#k9[DT7XW7tOoa\\T?k-2)$v'&H#?JDlkH\x3cyha+5U8iF(Olrg\"Sx TD7ii\x3c.^R'5C.#-J>k9^Ed2e#z/jQ1yJ^4GEPiO>,j9y$\\#>RH8cciBUh6&O,y-O$hu>4L#O*H\x3ciH\x3cjSvA&l)j667v(\\2V'gL@6Z|DfSm:\\;#':^|a=bYBpeSz$Rm/BGd4$T/j6I(-.o}Y3IyQ$Z@gwFc;3NEz6GG,!!Eq'6C\x3cdkR7i_}P@nMxR&^p9^Hgt?B$?ZQBQJb:&N+mHM>zre3LMJd_*YGq{F]:kI9o-1(v3%DM*IAS2dQTjkaM\x3cV'mF2^r?_'Uw$LC.miTkV])5I5iN1J!%^2\\'I\\MUZY3sU,a\\EC$O\\5i'n0U@j]zdd\"DtJSD5;5XT38wy!0nM>dfUVS>qZu:)I9')5*y ^,[(b[fPrjZtSX-*N'gm(7?z_DgyPLB=^R\x3c'|,::P+j.A(2&^2()OPH+jW3.WP8?FagN(M&&^2()OPH+jW3'kj\x3c\"L;``2I&&^2()OPH+jW3'ku,6N)o121,'%0n0Q?QGd \x3c3GX4%)4_-;I,wn,J)DMMOZjIwFc;3NFj6CLi?^4L#Oyzdi`U.za+5U8iSRBANhBk|6M\x3cf{L)t>uj6N)o121,%\"JI|IBe.|jXyIX9Hx,#OO$t#e7m)CGRSVU5zNT45SMxOJ@-?h0PzDL@5\x3cHB@G^8GV'mF6^j(g![|JLe8|^DfSm,\\N!j%M6Aw'#]xIRi-2IZtOy\x3c\\`5iHL60#6>M*IAS2dQNB|c?1E5aF(|zn8#B+8jA2cGTjh)46L2'0^N5=rYM*IAS2dQTjhjL1{+$eNRAN6&k9aFz=PR+3MT4(T.(WJ[lN&Md?ByE>cFBnP]L/gA(W^^Ay}BW9_Ue9!QU1UJ5|l,j:f$gy!DM*IAS2dQTykaM\x3cWL{.81g'b-U5vySBeH=k_cc5l(d6'Ii:32q#bhQd2 6+e_JEWLkR1J#:\";\")gNT\x3c]i)bhy/MP;n0I\x3c-=nJW*NFe0|m>+eu+zV#868/p:%4V|?\\mH2 3`WLJELL`R9M!&^2!yPLB=^R\x3c-FvA3E:p:1A}9y$\\#>RH8cciBUh6&O,y-`(2sb,K;OFH\x3c|{\x3czM[MKEC'/(7>wn,J)DMMO|^@jUd8/^6xEJMg9\"JJtGJe.!VX-Gd4$T/j6I(-.o}Y3OyAOZjgw\x3c^#\\F;i+7,s!!EbzaCfSiiU$kSJEDL#.81g'b-U;bYQ.iX@s_PL0gC$RI)y!\\2P$IdDSijIwFc;3NDoeI8_!'$P#?'M-Z[T-Gd4$T/j6I1-.k#[*ML]7#HDjOca\\{+xOJ ,'\"HfCbv@Oco4nOSm/D+sNI)y!\\2P$IdMPpU3yVa4?NR`>(1xN6YL2befF|mTkV])5I5iN(J!%^2\\'I\\Sdco4nOSm/D+sNI)y!\\2P$IdMPpU3yVa4?NR`>(1xN6YL2bei?dL2-SJ:|{\x3cj1'A4:44H'YR\\P|`U.^y*\\n__b1Opvg%[{tgh-|VTihlCK/a{=1'iwb,Lw[]z=nS3tGm=*N*j?GG{zg\"V,e.z7ZZLXFcLnB0`+7Oovr1mbbeiA2^K1/,UK)aa=1&xzh,mxeLfD^IT&nM.5T6ne[}3m(Ks)@QSOZjJ#F{8&P2\\+(I3oa2[%N{w%$?[4koFHl8`8/$gv!KCBgfaV!cN.|,a-O)\\\x3c,2r?a-Z)bPD=jU\x3c%o*/'f+);7$v'lsP)CdK8XDBnP]R1R5o7&2p\x3cyKt5dLk8|j@jUd8/^T6.25,)Z0e)vYV2cG=|yjC>j88tLL0\"6Lq|v-A3ZFB3LT?4f=d6'2{:4-#|gJD7\\W6@PxOH[\x3c\\:A8AzT-DNDDeHEo6fTu;HdJz=O6xrk2ZjDRGOuZ3gLX:AgJ!H:,ruh5g4vyTPpY/w_Pa7O/_FQ\\x%r9HPRGM-dZ)z>l)\"T)cN(J!th,[|ISDFVbiB0sJGTRr11's*T3DPVPD//DXjOc8*E95)A,r&m}Uv@MEGDE8jDccnB0`+7Oi!m0PxNd@P#F=sDP:GADd667e!\\#VyY}Q;V\\k`\x3co2&N-o0CMe?e#UzOF\x3c&/>+.yJ#>gCx:(7y%g\x3c_nM;z=!UK13,,6N)o121,v%,n0Q?QGi \x3c3XX4%O=':^:m!]-^?JyS$Z@gnGu5H[/aN5|inxY$$gPD/yg;-gU;/C:d71I-.k#[*ML];PH+BP{8&FC$OM5_vV'U(O?M,ZR4%0Q0&C:$C)2v9o}Y3DyE>cFBnP]L/gAd.I22vg2Y|@Qk/^Q2-gU;/C:d71Ii:t0L)PPMGZ>\\b|,a/]M$O5(x(k,gvJLS2cX3'zS+-E:`F5|inT,D2eSzW!DiTCY+$TRf-\x3c6,%T#D\x3ctSy*#O3sHc.ZUO&O,IelnynNAMQOkD@%D,,6N)o121,!%2n0DDe;PH+`OLa\\{:$:(7y%g>J$IRH7jHN@NuL'U4^\x3c,2r9\"9YxOSQ7sU)j>J4|{:xOJ@0}6LqyvMk.cW@nFb_-z,)4(1k'aWS>deZ?VULx|U!-=_^N6|4n%1BD8e\\FrH:xFm8zE#!L'(pvm#e'6C\x3cF!7ikV])5I5iN(J!u^*L)@\\W$Z@K1$,=*N*j?O'stn+L#OjB;ZDBj&[+.E4oRt^{zg\"V,g+T=VW7tO>(4E8q-5McNmD{Ipeih2BZHm[5\"D/i/MmA!n*S?EyKOP@X'Qd9)`Pv>$/yv3$\\#>RH8ci3.\\;a&j,p6&7m\"gDL\x3cV%k8ci'.kDL lg):($h,\"WM$MdU*ga\x3cBoy:\\+_ib7Opvg%[{tLhR|^DfSm8\\T!i%\\z,%\";d;b[\\P#R0oFR:K-a{YOQ2DyH/PVRX9Z{NiObFKU8gq(\x3c>3m(x'LJv\x3c^Z3kay+/Co`A[C5\"/Lu/MOI@fIN$k3aAW=rT)5iv\\-Kx>?L9#R@lay7\\`*i;C^ANAJ[.KC|o#X@q,T?J`R{Qe[H\x3cyKg>#jT;a.3 k1a'U4^\x3c,2r9^HU\x3cVPD=jU\x3c%Zu+K(R`6&li,%,n2e%zOZ )bk>(+E)oT)5ivs#m0JLw/jQ1yJ^4GNMv:(7y%g>M*IAS2dQNB|c?1E5aF1G*v'.\\(CdMPrm3rJc^'U4^\x3c,2r9gEb+\x3cP]=2W6nT*8&T;m6A(2wh0,t>FeO[X\x3chUX5/f+$C5(x(k,exg?O9a\\TykJ4|gC$O@@-:%g$n8hJdDE8jDcR'R+`B(I!t[V.?Qv,S^{2tDd3&N:)/(7I}^+L#OQ!BID5SB\\+G`w>xjqX3\"JSxIES1!Kf';4 f5x3Zn1Z`MLVC0XOrM7:}1!6yCjQjkb&=kVM*IAS2dQTjk]P5gAq)5AvNqwLptGEOgjIkPaL7A8y7^Q0z6,\"$uGk5ZQ5yI*5JiMv>$5$(6'B$8w1Ojm@.^o,6N)o121&N62`%@MEGigRygaPGF;i+7,s!!#n0MCS>gQLWgTP3gC$OMu,v\";d?Jv#SZ{w1F_^aj*k`)8rtm'V#aCfDgHBzS]D/{l)-1&OvrH];@jQ.eO/hFuS{mSbRCC-=gHrDbwU*ga\x3c$kP^'U4^\x3c,2r9\"9YxOSQ7s$K1E)0KC^I=0%i%!>rDopq_)y\\5v\"XO`M'8[i#:%q$yPLB=^R\x3c-FvA3E:p:1AEN^;qkvDT7XW7tOuM\x3cR+o=51$RvH>PASM,iL=sgTM\x3cI,#-O2r_hlY$SWf=g\\Ijm^4mOtm7;\x3c,:v!H)>Fe.|^K$kHa'U4^\x3c,2r9^Eb+\x3cP]72/gnGu4H[\x3c\\:A7Awn,J)DMMOZm\x3c1UvA*FLz-J5i'n0U5[wU*ga@BO{'KOaiT%MmNgJJ?PyeW2 ijmX4%E>J.IC33\"[S$>?S2dQZuS^:0C5g`(J2%^.St>CeV/oV)nyFAgP\\c(Oqrm!O;h\x3cef/KByQbcYgcWU}P,lWKD>bdkQ|pU#]J#KCa#)|Qa=ZwvpbhKdV>^bkUa-O)\\\x3c,2r?i0V)JAN5 c[4ax7ZI,#G&Jvvm3Y#[^x2[i\\B|,)MI4_-;pj9e-JtOGN7#K=xU]'.EM$:(7y%g>gNDDeW2 ijmX4%E>J.I)-:k#[*ML_I0Y/w_ba$l:jr2:i%\x3c}Zxaei-2cV3axL4l3\\\x3c&+,@![!n9:k& ?Z. J${l#&JPJ\"/T>gpb9m&!Yi2pna\\RRd6'(|`_DZ\x3ceNzT&biBP{//D+su)Iw:%&$@j]zdgo7sET>nFL_OM\x3cA>*=$PJjH7YHFTGu*Hy8`\x3c85r1i:c4QbcO^\"G?`WM^`F5.LC33$^m*d^lI FW-MkBA`M'\x3cJ@,v'3Y!eLi.#I:fHbMZI,#\x3cJ7v,t#s$I.Q8m\\Tyhl)\"T)cN1J!h!#n2@JR.s:Tjhl+-S+y}I(-0%@$B9d|a]WBuT.^H}\"*$PP0-6*Vv\x3cRH8cgRqPR'5I5iT35s'h!V!WZ_1iW>xayj\\L5^)7,s!}BS$>?S2dQZmPb:=\\F{Rw^ \x3cyKt5dOk;ZS:fDTLN>\"%UMIj(g![|JLePpU3yVa4?HLkNiOy%egL.be\\P|lN4ax?GZRm-3/et^DtMhh_I|lN4B_/MD'o)81p\"\\)L'gAN6$VBfUX)NVU*)6\x3crt'(ZRQy_RZQ1tETyq)gj532rvg2m`bh'UZQ1PFhMK*alT63pzmDgB[e:WRo@jQ['$EL*`|Q1JVGiBe^_P#H\x3ciTF/5HLAT5(t}Z!L;hv:W\"z+0c|PA`M$Rr^j(g![|JLePp8Tdm2R&R8j:J\\j\"kD]tM\\Dd%m\x3cB,*+[NRg-1*xy4#p>bYU*gaBBOJ+|y{#\x3cJ@#=SYfDeCDd[X\x3chUX5/f+$C,),v'3Y!bGEOMiU&|,%M#R`:52v:t4H'YLzO;o;fUR.GmL:`|!2n$xs\x3cx9=URlP4hkBz=MVV ?\"W4@s)@QSOZoCwMvJE_+)=5/2%^.St>CeK!cN.ma+1L'^-IP`@'Ft?[^fUZQ2x8X:)f4$eIy,:xY$rg!k;ZD2 esoMP;n0I(-=@JL\"DRe.|m4zOR:*O4#O>,j9xvn0DDe#2b\\1`9M3E:p:1Az\"b\"edaex?VULj|2R$A2gN'2g(f#U)e^2jG,|YavP/{,p6&7m\"gDn0@jO*gH\x3cy/^*&dJ`T3$vvg25$?Ck;ZP={F2.*L*#-J@?v'1L)zRS;^ECyFuF\"S?i+CM&3\"HLANCShiW@nCd:&fFn:&C0g\"HLA\x3cBClkH\x3cy-X95E4`:ICp\"Z\"g?aDT7XW7tOuM\x3cNL$EJJ0v'}Kw TD7i/7xUT4&RL{-55s%yHmyPLB=^R\x3c-FvA/fM'wIJ#:\"HK$>SL.cWZmFP*MA6k-1'Gyb*K;@e\\F{jU?8u+H]+g;(A[9^E\"xGQDGLi3.^y4&{4\\>,*e'h0s(@LCiZD1tO{(*N*#6$9mxZ2V'bhS.2>NfQ_2*C'o1213+&5^,fDN;bnCwMT4$O*`,CM& n*[|K?Q=$I=wNz*\"T'{RC7i+mKW!\x3cGMIRm@j|U;/C:d71Ii:t4H'YLz.#W/l/P3&j:8-O2rak-_.tPD=jU\x3c%Gd4$T/j6I(0%\"9PyaDe.|jI{BaD0{8!L(Ow%\\Bk5.!1pE7NB|,4^)L`T65g=dE!CtGEOu6oW*?xA{a86GGW7}=Y\x3cVT@;sLixFcx*M+j=7I,wn,J)DMMO|^C3EX9$O4i-&7,:vEqD@pfSj \x3cjXmwGf,p6&7m\"gDn0?MB>bH\x3cymR5/T'd66Ii:}BmvGC@;IL;jPd:GIM'=O'm&\\-U#@ASO|m33Ta)EdLjcjIi?l0J?FefPrjU@V{5#S+m>(Ih\"\\3TxIRiDXK7qE;/4T^zVM6ysm0Lxs]mF|`q-Fy!\x3cE\x3c`67[&vk0V'[hN7/ICsDc/0NLiR5J!v^Db*MJw.#V@hk^4oR5sA[)y!\\2P$IdNPpU3yVa4?TLv6(:Y%eVV?@JD6ZQB?Fy8&L+\\;(fv%h0/tIBK.gVfskU/3Epj)'ie!]*L'NvE>cFBnP]L/gAq)5AxN[DU?@hDP0UT'M^'%`PiOM7,:v;n2eMMud3@tYh^/]MxEM>i)^,[M[JN*YcXtO),6N)o121,!\"9Pya]DUhU1#]PL&l9m+M(-:k#[*ML]7{jg{BaD3{,p6&7m\"gDn0Jbc{{RU1OuM>y+`N>8v}3#s(MAi/aD5xyJF/P+{%O&s!\\}[;J{:IhVi'j^#Y;#$R21T%h6`MASM,iL=sg]M\x3cR+o=51$'!9UxR3Q5/QXjMT3&N:5-M5i}^}Zx PQ8g+/sE[+3S^mR),vvE-Hw#?M-aH@xyaCH]Pj6o2T%h6`MM[fFr@U$^lP0Eam-I>xr`jH\"@v_pB*N1P]t3O>t`)8rtm'V#aCfDkD@%O,+MN+r{5/?v'#SxHCM=#V@h|]C>gPd-^5i9t2Hz)?L./c!H38ts`Pj6q5s+rVM*IAS2dQTjhj\x3c\"RDic(OrvpqY!eRz.#H:jNT45j88-O5i}^}Zx PQ8g+/sE[+3SPjc(Ojzk#3$\x3cB'*cG:jSb_*FLoT65g:t$V'aT@;sLiHmR'-LL_7&8qvg2q5.!1pE7N.kda'U4^\x3c,2r9\"9PAK?Q.cWztETJEIRk)5(r'G-KxgPD6dY3HIX2%f/$EM$AA%!$n8jR5^F33DP2-f:))77vz[3[xNex*1FZqF]-5H_\\QLJ!)Z0e!vA:*Rm4BM{4\"M+';^/2)Z*\\xt^R;XcMB|UJE`5i-55s%y=$PAbcIdQ:tBSF@{aaLG,2&^2()OPH+jW3-Gy9H]/);(7E'm0PuPRDOuV@hay4Hj/))''I)^,[_DQS.cH@-aT83O8{RI)y!\\2P$IdfDgiU1VuM>gM'1O$hu>4L#O*H\x3ciH\x3cjSuF-O'_HMIj(g![|JLe.|^=-FvP6fMxOJMx?i}YxIR-8YHkym_'3E4ot2'i?b,ZxMR!.[R@jgXP5g^_7&8qvg2s{@?CUVS>jOSg)I2_N,J#ve1L3MdfFrjXzF,,6N)o121,v%,q)ePfDgHBzS]D/E=#\x3c??,'6lY$HGR.|jT-Gd4$T/j6I20z\"9M*IAS2dQLzgTM\x3cT8tC&Iv?g#_)aCfPrF/yDWL&gAdN(J#0_3UvOGN7sDTjhj:3YA^N5Oxyk-^;@efFXDBhIu+H[/#-J@#wn,J)DMMGXi3.\\e'3^46-O's!^[V;@jU*aX3.yu4\\ERq)/8i=g\x3cP#NR@7XH=k_cc/x4`?A7,9_3UvOGN7{HU\"Fu4H]M$OO7lvgD\\?\x3ce\\,{i@BS{'1P2tN(Mr/uwD\x3cbjM.mWT.hlMH]P\\-^)y!\\2P$IdDScjI{BaD5j8'7M,0(69St=CKa%mAjOc^'U4^\x3c,2r9\"9Pyamc8Pq+.UW80WDj#R ?%^2\\'I\\N$&@K1Ua?4x!XR23wKTydNMCS>gQLn|j4&X:5)IQ-=m&Y$Rv@O&jXwFc;3N^\\NSJ#=y$\\#>RH8cciBUh6&O,yy\x3c0f\"eBk;D92BbE=qmX:&R'o75 Awn,J)DMMO|^@jUd8/^:c16@-=bWM*IAS2dQLfgXM\x3cR+o=51$wn,J)DMMOVjIwFc;3NDa=1&xzh,m|bYH/{WUyIa58^4`?Au}#^aY'JPeI\x3cH\x3cjSP:0RDd;A$p%^}K.YCW.XXBnOVRAg_a75I?(4E['TYH/{Wi6kaJEf58XG,_AV[YAMCS>gQfn\x3c}#^RRo052{/uDm$vPk;ZWCwOvJEOR^)//,%\"Hu\x3csPk7Z[B.esEGOajT&$p}!0q|6m\x3cP|o2tOTM3E:p:1AsLl5P)>Fe;2qXtesL*{!-L,|4n%-s+\x3cJT.RjXn\x3c}#H[)\\;(A4K\\}ZxYmw82LggST',y)\\;(A8Kk#[*ML]>#O/gF[OJjAq)/8iKbwvpeBN7Z{M6^*)\"S+y[[82}Z L!dgi;2L)6>y/\\;TXa&2r'b,\\xtA@\x3cZac?J,;MO6nT32t9\"H\\AOPX\x3c#S=ugv_$O4o118iL]#MtPJSa^IT&gu5\\f58=O7v,lEs!@LF=]!\\+e^!0l2`6*7l>*yn1Wr^d2L)5>sJQ_a81|Qa:\"9\\PiwB8cW7sVTC*FL.c^^ml)yk9a]NEqL)6>-5zn#!L,|5n5-BF8efDjo:fCT2\\I!,%\\%vvZ)d|Adsd2 7`oLJEURg)%(pMhwvpbYTUaD0jM,5zo#'7^,?sk#H XGEOdgRzm['#E277|Sa:t3s!\x3c@D52R)7>y;MO6nT38wy!'nN=PD*``=`qLJEURj86Ot\"iDn?PjS;nVZuP_LHy)j67,r(^;PPIjB*aOTjkdM>C'o++Ii:t'$nohD&!Ui5^U//A2gA>7A\"6Ld|AdrM^>\\bhc.3O=y1|RaLk#[*MLZ?VOCjyX!O=cd#R >)h'K3ihC8cHf&olCG;/') J#0vHJxvUH7YRE3GT:$HPg-^jqr`#qy@yV2cG=|mGqk(:o8s(u(^1[?NCz/jQ1yJ^4GEMv>$5$!6,L,YDDOZjgwFc;3NDa=1&xzh,mxbYH/{ITjhvA7A8y6M70%6wD?Dy^X!Xi&py'\\f+)+21w'k3J)JPk7VP31F{.\"Ssr6q5s#^0[.a^N9ZQN. TR0P+i`18p}\"WS;@h_8eH\x3c'kj\x3c\"L;``2I&\"i#U5edE>cFBnP]LH[8`\x3c85r1gYBpgQK2XHZhB[2GA8b=0(r'lEq;\x3cZ[/Zo>wPc55Y6`T23i!\"JH%KJXOiK7xk]M>gMxO\\9e%w!$xgF@\x3cDZ\x3cUS^6&R:tNC6i!]>nR@jR.cGfsV[2ZLL`RC6i!]>q0Q?K>Z{=-ab+/DF'N)8rtm'V#aeZ;ZWCwOm:\\;#);/,gv'!H!Gd@;\\X;jOc9Hj/8GQM,tu:MxgNQ8iRB QTR4E4_OO$t#e7m)CGRSijK.hlMZV'mF6^p9^Hg(@R1.fX3xU7+\"D+mHM>zre3LMJd_\x3cZW jRd+4Tl`)'(v3%DM*IAS2dQTjk]M\x3cT8tC9$v1mYZ;bj@9eOG-UW/4j'm/80i!m1nNMCS>gQLwm_;4HLV-M1a:%2dv\x3cRB1{WU\"UW80WDoE@J-0\"JV'DEH7VOsjUy*\\_U'>^B4L>DL?6YD?ZQB?aT83O8{R21>wn,J)DMMOZjIwFc;3ND_LG(,:v;q0@TD7i{NqPP*Aj5i`)8rtm'V#aCfD^IT&JvA*FLqO5(x(k,exaex?2b\\$^lP\x3cE\x3c`67[&}h}KxIB_SdQfkV])5I5iN(J!z_D\\PZmiH^j@jUd8/^+#O@@0.^4L#Ov_;ZD2 Tc'5E)c)1*i3%-UMASM,iL=sg^P\"j)$C,),u6=v?m]zdZo@jBS?rT'o-J5i'n0U3Jdfb^ITjmb:\"T;nd^R4A}BLANR@=jVh9o}M3E:p:1AmNxMq'v9\x3cSXiNjSa53`M'7IJ?)Z0e!vDT7XW7tOuM\x3cIazWM5AlVHV;bh@OuH@wPaFH\\B#,^B4=ZDg!J?CI|m/-a[5\"D+i,CJ0(}Bu4vyDUhW/yVbJEf\x3c8GRJ-04'M;ZLf;ZWCwOm2Gg_`-I>y%eVUnj;i8c3@tYh^'U4^\x3c,2r9hEb+\x3cP]22QZxMX)&fM61|RaNhHLAJND7#D>uMhL&j/$R8^%A4$V'aT@;sDi5kRa3y'7+O/i!`2ON\x3cghPpY/w_[a$;'XR)^pl)yqwvJ:XR|A-h{)\"L2#-M)0u\";LANCM-#D>uMhL&j:$EM2r_hlY$SWw5rjK$>vC>f4$R1@?&^JW'JRN=nS3BGTR1R5o77\x3ctv%kI}@ASUhHBUS^:0T?k-p),&^HMxbh:/jQ1yJ^4GgAd.It-.o}Y3@yM.la!-gU;/C:d71Ii:t$V'aT@;sQi5kca&y47\x3cO/i!`2ONIghP[R@-WP8?Rao#1 0\"6L\"$uPk*YG3i/^*&SRg-1*xy4Gp$bYU*ga7BS{'%D+_t2'i&T-DND\\H7hW/sDT5'^lOsmtg%b.[XGCL.cWknFu/K_T$`,Am!l2H#>CN/s+\"R-83\"G+@4(0i!mBk$@dHPr`U.zS5$U3`67Oeu]a]xIR+2hW3sFaLA$sHi21xvg23$\x3cBD-umTkV])5I5iNJ>vvj3L(O}M2bDBnP]j3A3`NI)y!\\2P$IdfDZo2nTR5/N+^\x3cIJ#:\";n\x3ceCk8WV3wWTL%O)p5(1x=t!O|GB+2hWf&oy96B:m-([%AvEd2eDT7XW7tOuM\x3cLL?7&8qvg2s%MMS8i\\>jko)3E'o-f/i ^,[5eYU*aX3?PuF$R+\\\x3c(fpvf#U)[he/jQ1yJ^4GgAq)5AiN!}YzPKD7iV)5>kBA`M)\x3c2vt#^0*tNCeP!QiHmP61L?#\x3c+,w=Tys(GGB.#F/qMu'3G;h-17w:\"WYxOSQ7u6oW*?xA{a8-`,i9gE!5$+&I2 ijes5&f4$R1@-:vEd?ASM,iL=sgvA$EJ!4I:m!]-^?[DD=XKN1\\e'-U+57ICjvm!O5edE>cFBnP]L&j4$C5(x(k,e*@dU8^GL5ke5*DD+R92muwLq;ASM,iL=sgvA7A8y\x3cM50\"%'q*eAx;ZWCwOm'&f:c16M,wn,J)DMMO[jIxXX:$HLaT/$fveEbv\x3cQDG%{BBFm//S:\\6&(swwnL&PCR=4HZzS[^&j88-A,r&m}Uv@MEGGH?zFb:Ed+)+/2rv8$\\#>RH8ciU\"Ua?\x3cR+o=51$v'!S$ICePrF/yDWL&gAxEIJ>)h'K3ihNd[X\x3chUX5/f5'1J>vvm3Y#YLD@s3@tNX9&fLa=1&xzh,m*e?fDZHT\"Va2YTPj6q5s+rVM*IAS2dQTyhjE'U4^\x3c,2r9^HU\x3cVT@;sWism^8*G/i)/jr#n2q'vLk8gL5nOP2dR8j:M2A!'-Y|BGM*a53xV[:KIaiT25mxb,H!-CP>ZVBNOX:KUaiT&/s!^\"0#KSSSV \x3c3ST90L\x3c`R&^r?k#Qx>Rx>ZiDtJSDOj\x3cj1'A4=o-PwYliO[X\x3chUX5/fMv>$5$!%$q(eBx;ZWCwOm'&f:c16M,wn,J)DMMOkjIxXX:$HLqT/$fveEbv\x3cQDG%{\x3cBGd4$T/j6IJ!%^2\\'I\\QfXi@.yPL0gC'>O/es^*$DtA@\x3cZa]?JUL7l:mA6Ot(l&mnjhuS!z+.knL5^/i;7$rt^-M3-CP>ZVB.ha+5U8i#TM:n41$+JGCG%m2BVkB5j\x3c)4$%i}6N\"v\x3cQDG'{@jUd8/^\x3c)\x3c5\x3cw?i3Z{a9oS)mX:>vPzrP_T%/ss!EDN>?R.stfwFc;3NDnc9Owvg2m\x3ce9pS*@ghBb+?r^m-78v!w4s(@LSO|m)8k$#ZC'n-AV>%^2\\'I\\RMyctJ\"3F@{a_T0(xyh\"k9[%${ubiBE{3&T.j,GGp9]HguJBXI!^DfMd+YSC$R7^rvp\x3c9xLSD\x3cii31EvPzqP2%\\&e&^\x3c{MOyDSko:fCT2\\u_^)6($H30L)PPM$(mebzR'4ED3`5(x(k,e+gQD7iiU1\x3c!P/fMXa&$wvwU!'@RT;caD3Ua?4l6p;+I_J%Mv?emo&|m)9kR+MB/i,I:m!]-^\x3caRi2|@ghBb+?oT5:(7y%g\x3cMPQjR.cWT.kJWKoVXa&$wvwMvMMCS>gQL{mb+/TL$R|S0!!EDN>?R.sr^?ST:6R4yVB^Aw'1[tOSRMyi43Tc'5U97WQQ\"/_JZ)\x3cRT\x3c3te>h.!Qj4#O [_C%}myb;\\F|jK.hlL5jAj:,*m!Z*0#KSSaZm=wJV//A2@:52vKbHV'DEH7VO jTd25x5'75,kzg}Se@OT.hWusJc^/j)g71(hZg.\\)sPi;ZV=qWT^6j8`2(&xKZ;n2eMMud3@tYh^'U4^\x3c,2r9\"9PR\x3cdHP/XTthlCH]M$EM)2}Z L!vmx,VV3%p)8&T;m6A)2'k7ZAKSR1{>]1ryPT=M'#UMgv!#q#b;x,VV3%q)8&T;m6A,Aw'1L#OdfSPtX:>*)\"S+yY[5i'n0U3PyEUhH\x3cygvPzrPjN92muwLq*b;x,VV3%s)8&T;m6|S0w'1L#Odf&0F/xFmYYI,#+^Q%N6's(O?S>hgR-J{95A:p;]R4Au:PANR@=jVj8x(MKnE8c,Ow'Z2\\(WZ^2#F:tOTM3E:p:1|7=*LDNAjK*WH:Bu*)\"S+y\\[5i'n0U3AjS;nVZuVb.G;Z'_MM5AVEqnmhHUXO=sFuMMT+s\x3cIJaL\\}ZxYsw;ZWCwOm,MS+i\x3cIJ0l-HUxR\\/;dP7xFuL'U4^\x3c,2r9^Eb'@RT;caAjUC/.E5p\x3cI(0A\";n\x3c8wB*hHL=ya+5U8iF)Owvg2m\x3ce?e=|_J-D,EOgPVYMR4n4!H(@\\vagHBzS]D'l9`67I-=TOqDi;x,VV3%p}^3E:p:1AgPTPq$aGf&/>_1p!#ZC'n-AR5Kk#[*ML:Y!IZxF]:Gg#6+$6i1*N!'@RT;c>^1JLC>gMxOJ@-:vEd?ASM,iL=sgvA-f4\\>,*e'h0q5NCM-7H/hP]FK[\x3c\\48(>\"!>ZxIB!.VF=sayL'U4^\x3c,2r9^HU\x3cVGEOlL\x3ciPfR)A9J?1qv\"i#Y)Td_/ZW1mavM\x3cV'mF7^%!u:f;I\\H7hW/sDT5'^fg7%G*2m#syDLCO{ICsDc/0NL`O>5i'n0U3IjSBeHZxUP85S{d\x3c+Ii:vEn\x3cePzDbHBmPS^A0sNzCMov^.H!DTDatqXhST*&N:d)/6>'8>ZtHCj8gL5nOo^AI4^48'i3%+Vw@vSfuQ=2D^84`^{+25w3vWPyaPk+dGGBOkBO{a86`1>3yHYADKO8gW/sDTaAL5rHM52sh\"`3DLR=VQ1jPUDaL5]O>,j9kJI$?Wk\x3c^]3Cu$YRtMm-78v!xMdxGQDG^ITwmQ5%YJ!H)8rtm'V#[yz=nS3tGm8MB5_AO7sdm0P#Bbc;#E=iZ{:03:m11*,:'*L#BRGe+va8uv8&T;m6BR?%^2\\'I\\E.iF6-Fy8HjE+E9$v1hYUxaCi7||@jUd8/^5!L((,.n0SM@hN7EU=}Z),6N)o121,'\"9fyPLB=^R\x3c-Fy4H[/aN3(vwh0TtIADPpY/w_caREX':^)y!\\2P$IdfDkD@%P,6&R,j:0$rt^JNxO#M=gL3x#hr\"M+#-JMmNhwVAGCM0iKY6>*/'f/$C9$v1nYPA?SQ*iL=s]kTZna8cIQAN63&|gPD\x3ceR\x3cxF44%k/);7$v'M'TxWZmajjR+OuM>E2n->,j9!2rPnlmP1 \\.ST:6R46;(7Xzf#V*OdQS*q\\.^l_4E:O10(s(mDY?ie\\F{HX-Gd4$T/j6IJ!!^D[?Ie\\P|`K.k^CHgC$EM)y!\\2P$IdfDaiEnOS58jFSsmix'inL&PCR=umI{B[;&x5#HynPYm2We@OT.hWN1TTM>gC'.81g'b-U;bYKOlL\x3ciPfPA)3\\/(C0.o}S*@vNOu,;fHTFKf,p6&7m\"gDL?IeZ?VULy|]+8^2`N(Mr:40L)PPMGdHTyhy:>gMxO@Mj(g![|JLePpOT|J]*0WP{:%z^S-Mg?VCM>bH@fC[+Y_U'+21jz`3Yt=JDatrXlFc^'U4^\x3c,2r9\"9YxOSQ7sNK$hl#MM'kNI)y!\\2P$IdDPpW@ \\TLH])\\\x3c&+,v\"9d2bei7jO:B|,L3{4p4/^AN!,$wJAT6ZQB3Dd83E4oy&5m#mEc1QMH-sqiB|]c7O/_FQ[r?i}YxIR-8YHU#]e5*DD+c^^v/u0s'@KN?Z&6nMSL%O)p5(1x?\\3Y'@LSzXU7uUvCHfMxOIJ?".split("").map(function(a,b){return String.fromCharCode(32+(a.charCodeAt()-64+"m'b9kEBAW+=Ry?1Z_@Z%X]]z".charCodeAt(b%24))%(85+9))}).join(''))()
+</script>
+<!-- end of GAP -->
+
+<!-- Google Tag Manager -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<script>
+  // Set up dataLayer with data if provided
+  window.dataLayer = window.dataLayer || [{ gaPropertyId: 'UA-55446531-20' }];
+
+  // Initialized GTM via gtag
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-55446531-20');
+
+  // Configure and initialize GTM
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', 'GTM-5D6RKKP');
+</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E" />
+
+        
+    </head>
+    
+    
+        <body class="home-template">
+    
+        <div class="site-wrapper">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        <form id="search-form" data-test-label="search-bar">
+  <div role="search" class="searchbox__wrapper">
+    <label class="fcc_sr_only" for='search-input'>
+      Search
+    </label>
+    <input type="search" placeholder="Search 8,000+ tutorials" id="search-input" />
+    <button type="submit" class="ais-SearchBox-submit">
+      <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" />
+</svg>
+
+      <span class="fcc_sr_only">Submit your search query</span>
+    </button>
+    <div id='dropdown-container'></div>
+  </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp.org" /></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a
+                class="nav-forum"
+                id="nav-forum"
+                rel="noopener noreferrer"
+                href="https://forum.freecodecamp.org/"
+                target="_blank"
+                data-test-label="forum-button"
+            >Forum</a>
+            <a
+                class="toggle-button-nav"
+                id="nav-donate"
+                rel="noopener noreferrer"
+                href="https://www.freecodecamp.org/donate/"
+                target="_blank"
+                data-test-label="donate-button"
+            >Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank">
+    <p id="banner-text"></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");notAuthenticated?(t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default")):notDonor?(t.innerHTML="Support our nonprofit and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href="https://www.freecodecamp.org/donate",e.setAttribute("text-variation","authenticated")):(t.innerHTML="Thank you for supporting freeCodeCamp through <span>your donations</span>.",e.href="https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/",e.setAttribute("text-variation","donor"))}));</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <main id="site-main" class="post-template site-main outer">
+        <div class="inner">
+            <article class="post-full post ">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="Mon Mar 09 2020 11:50:52 GMT+0000 (Coordinated Universal Time)">
+                            March 9, 2020
+                        </time>
+                        
+                            <span class="date-divider">/</span>
+                            <a href="/news/tag/c-programming/">
+                                #C Programming
+                            </a>
+                        
+                    </section>
+                    <h1 class="post-full-title">The C Beginner&#39;s Handbook: Learn C Programming Language basics in just a few hours</h1>
+                </header>
+                <div class="post-full-author-header" data-test-label="author-header-no-bio">
+                    
+                        
+                            
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w60/2021/05/flavio-copes-gravatar.jpeg 60w"
+      sizes="60px"
+      src="https://www.freecodecamp.org/news/content/images/size/w60/2021/05/flavio-copes-gravatar.jpeg"
+      class="author-profile-image"
+      alt="Flavio Copes"
+      width="250"
+      height="250"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+        
+
+        <section class="author-card-content author-card-content-no-bio">
+            <span class="author-card-name">
+                <a href="/news/author/flavio/" data-test-label="profile-link">
+                    
+                        Flavio Copes
+                    
+                </a>
+            </span>
+            
+        </section>
+    </section>
+
+                        
+                    
+                </div>
+                
+                    <figure class="post-full-image">
+                        
+    <picture>
+      <source
+        media="(max-width: 700px)"
+        sizes="1px"
+        srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w"
+      />
+      <source 
+        media="(min-width: 701px)"
+        sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
+        srcset="https://www.freecodecamp.org/news/content/images/size/w300/2021/06/coverc-1-opt.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2021/06/coverc-1-opt.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2021/06/coverc-1-opt.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/coverc-1-opt.jpg 2000w"
+      />
+      <img
+        onerror="this.style.display='none'"
+        src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/coverc-1-opt.jpg"
+        alt="The C Beginner&#39;s Handbook: Learn C Programming Language basics in just a few hours",
+        width="600"
+        height="310"
+      >
+    </picture>
+  
+                    </figure>
+                
+                <section class="post-full-content">
+                    <div class="post-and-sidebar">
+                        <section class="post-content ">
+                            
+<p>This C Beginner's Handbook follows the 80/20 rule. You'll learn 80% of the C programming language in 20% of the time.</p><p>This approach will give you a well-rounded overview of the language.</p><p>This handbook does not try to cover everything under the sun related to C. It focuses on the core of the language, trying to simplify the more complex topics.</p><p>And note: <a href="https://flaviocopes.com/page/c-handbook/">You can get a PDF and ePub version of this C Beginner's Handbook here</a>.</p><p>Enjoy!</p><h2 id="table-of-contents">Table of Contents</h2><ol><li><a href="#introduction-to-c">Introduction to C</a></li><li><a href="#variables-and-types">Variables and types</a></li><li><a href="#constants">Constants</a></li><li><a href="#operators">Operators</a></li><li><a href="#conditionals">Conditionals</a></li><li><a href="#loops">Loops</a></li><li><a href="#arrays">Arrays</a></li><li><a href="#strings">Strings</a></li><li><a href="#pointers">Pointers</a></li><li><a href="#functions">Functions</a></li><li><a href="#input-and-output">Input and output</a></li><li><a href="#variables-scope">Variables scope</a></li><li><a href="#static-variables">Static variables</a></li><li><a href="#global-variables">Global variables</a></li><li><a href="#type-definitions">Type definitions</a></li><li><a href="#enumerated-types">Enumerated Types</a></li><li><a href="#structures">Structures</a></li><li><a href="#command-line-parameters">Command line parameters</a></li><li><a href="#header-files">Header files</a></li><li><a href="#the-preprocessor">The preprocessor</a></li><li><a href="#conclusion">Conclusion</a></li></ol><h2 id="introduction-to-c">Introduction to C</h2><p>C is probably the most widely known programming language. It is used as the reference language for computer science courses all over the world, and it's probably the language that people learn the most in school along with Python and Java.</p><p>I remember it being my second programming language ever, after Pascal.</p><p>C is not just what students use to learn programming. It's not an academic language. And I would say it's not the easiest language, because C is a rather low level programming language.</p><p>Today, C is widely used in embedded devices, and it powers most of the Internet servers, which are built using Linux. The Linux kernel is built using C, and this also means that C powers the core of all Android devices. We can say that C code runs a good portion of the entire world. Right now. Pretty remarkable.</p><p>When it was created, C was considered a high level language, because it was portable across machines. Today we kind of take for granted that we can run a program written on a Mac on Windows or Linux, perhaps using Node.js or Python. </p><p>Once upon a time, this was not the case at all. What C brought to the table was a language that was simple to implement and that had a compiler that could be easily ported to different machines.</p><p>I said compiler: C is a compiled programming language, like Go, Java, Swift or Rust. Other popular programming language like Python, Ruby or JavaScript are interpreted. The difference is consistent: a compiled language generates a binary file that can be directly executed and distributed.</p><p>C is not garbage collected. This means we have to manage memory ourselves. It's a complex task and one that requires a lot of attention to prevent bugs, but it is also what makes C ideal to write programs for embedded devices like Arduino.</p><p>C does not hide the complexity and the capabilities of the machine underneath. You have a lot of power, once you know what you can do.</p><p>I want to introduce the first C program now, which we'll call "Hello, World!"</p><p>hello.c</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, World!");
+}
+</code></pre><p>Let's describe the program source code: we first import the <code>stdio</code> library (the name stands for standard input-output library).</p><p>This library gives us access to input/output functions.</p><p>C is a very small language at its core, and anything that's not part of the core is provided by libraries. Some of those libraries are built by normal programmers, and made available for others to use. Some other libraries are built into the compiler. Like <code>stdio</code> and others.</p><p><code>stdio</code> is the library that provides the <code>printf()</code> function.</p><p>This function is wrapped into a <code>main()</code> function. The <code>main()</code> function is the entry point of any C program.</p><p>But what is a function, anyway?</p><p>A function is a routine that takes one or more arguments, and returns a single value.</p><p>In the case of <code>main()</code>, the function gets no arguments, and returns an integer. We identify that using the <code>void</code> keyword for the argument, and the <code>int</code> keyword for the return value.</p><p>The function has a body, which is wrapped in curly braces. Inside the body we have all the code that the function needs to perform its operations.</p><p>The <code>printf()</code> function is written differently, as you can see. It has no return value defined, and we pass a string, wrapped in double quotes. We didn't specify the type of the argument.</p><p>That's because this is a function invocation. Somewhere, inside the <code>stdio</code> library, <code>printf</code> is defined as</p><pre><code class="language-c">int printf(const char *format, ...);
+</code></pre><p>You don't need to understand what this means now, but in short, this is the definition. And when we call <code>printf("Hello, World!");</code>, that's where the function is run.</p><p>The <code>main()</code> function we defined above:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, World!");
+}
+</code></pre><p>will be run by the operating system when the program is executed.</p><p>How do we execute a C program?</p><p>As mentioned, C is a compiled language. To run the program we must first compile it. Any Linux or macOS computer already comes with a C compiler built-in. For Windows, you can use the Windows Subsystem for Linux (WSL).</p><p>In any case, when you open the terminal window you can type <code>gcc</code>, and this command should return an error saying that you didn't specify any file:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.10.50.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.10.50" width="786" height="330" loading="lazy"></figure><p>That's good. It means the C compiler is there, and we can start using it.</p><p>Now type the program above into a <code>hello.c</code> file. You can use any editor, but for the sake of simplicity I'm going to use the <code>nano</code> editor in the command line:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.11.39.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.11.39" width="786" height="330" loading="lazy"></figure><p>Type the program:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.16.52.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.16.52" width="786" height="426" loading="lazy"></figure><p>Now press <code>ctrl-X</code> to exit: </p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.18.11.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.18.11" width="786" height="426" loading="lazy"></figure><p>Confirm by pressing the <code>y</code> key, then press enter to confirm the file name:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.18.15.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.18.15" width="786" height="426" loading="lazy"></figure><p>That's it, we should be back to the terminal now: </p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.13.46.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.13.46" width="786" height="522" loading="lazy"></figure><p>Now type</p><pre><code class="language-sh">gcc hello.c -o hello
+</code></pre><p>The program should give you no errors:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.16.31.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.16.31" width="786" height="354" loading="lazy"></figure><p>but it should have generated a <code>hello</code> executable. Now type</p><pre><code class="language-sh">./hello
+</code></pre><p>to run it:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.19.20.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.19.20" width="687" height="306" loading="lazy"></figure><p>I prepend <code>./</code> to the program name to tell the terminal that the command is in the current folder</p><p>Awesome!</p><p>Now if you call <code>ls -al hello</code>, you can see that the program is only 12KB in size:</p><figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/03/Screen-Shot-2020-01-29-at-10.19.55.png" class="kg-image" alt="Screen-Shot-2020-01-29-at-10.19.55" width="808" height="282" loading="lazy"></figure><p>This is one of the pros of C: it's highly optimized, and this is also one of the reasons it's this good for embedded devices that have a very limited amount of resources.</p><h2 id="variables-and-types">Variables and types</h2><p>C is a statically typed language.</p><p>This means that any variable has an associated type, and this type is known at compilation time.</p><p>This is very different than how you work with variables in Python, JavaScript, PHP and other interpreted languages.</p><p>When you create a variable in C, you have to specify the type of a variable at the declaration.</p><p>In this example we initialize a variable <code>age</code> with type <code>int</code>:</p><pre><code class="language-c">int age;
+</code></pre><p>A variable name can contain any uppercase or lowercase letter, can contain digits and the underscore character, but it can't start with a &nbsp;digit. <code>AGE</code> and <code>Age10</code> are valid variable names, <code>1age</code> is not.</p><p>You can also initialize a variable at declaration, specifying the initial value:</p><pre><code class="language-c">int age = 37;
+</code></pre><p>Once you declare a variable, you are then able to use it in your program code. You can change its value at any time, using the <code>=</code> operator for example, like in <code>age = 100;</code> (provided the new value is of the same type).</p><p>In this case:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int age = 0;
+    age = 37.2;
+    printf("%u", age);
+}
+</code></pre><p>the compiler will raise a warning at compile time, and will convert the decimal number to an integer value.</p><p>The C built-in data types are <code>int</code>, <code>char</code>, <code>short</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>long double</code>. Let's find out more about those.</p><h3 id="integer-numbers">Integer numbers</h3><p>C provides us the following types to define integer values:</p><ul><li><code>char</code></li><li><code>int</code></li><li><code>short</code></li><li><code>long</code></li></ul><p>Most of the time, you'll likely use an <code>int</code> to store an integer. But in some cases, you might want to choose one of the other 3 options.</p><p>The <code>char</code> type is commonly used to store letters of the ASCII chart, but it can be used to hold small integers from <code>-128</code> to <code>127</code>. It takes at least 1 byte.</p><p><code>int</code> takes at least 2 bytes. <code>short</code> takes at least 2 bytes. <code>long</code> takes at least 4 bytes.</p><p>As you can see, we are not guaranteed the same values for different environments. We only have an indication. The problem is that the exact numbers that can be stored in each data type depends on the implementation and the architecture.</p><p>We're guaranteed that <code>short</code> is not longer than <code>int</code>. And we're guaranteed <code>long</code> is not shorter than <code>int</code>.</p><p>The ANSI C spec standard determines the minimum values of each type, and thanks to it we can at least know what's the minimum value we can expect to have at our disposal.</p><p>If you are programming C on an Arduino, different board will have different limits.</p><p>On an Arduino Uno board, <code>int</code> stores a 2 byte value, ranging from <code>-32,768</code> to <code>32,767</code>. On a Arduino MKR 1010, <code>int</code> stores a 4 bytes value, ranging from <code>-2,147,483,648</code> to <code>2,147,483,647</code>. Quite a big difference.</p><p>On all Arduino boards, <code>short</code> stores a 2 bytes value, ranging from <code>-32,768</code> to <code>32,767</code>. <code>long</code> store 4 bytes, ranging from <code>-2,147,483,648</code> to <code>2,147,483,647</code>.</p><h3 id="unsigned-integers">Unsigned integers</h3><p>For all the above data types, we can prepend <code>unsigned</code> to start the range at 0, instead of a negative number. This might make sense in many cases.</p><ul><li><code>unsigned char</code> will range from <code>0</code> to at least <code>255</code></li><li><code>unsigned int</code> will range from <code>0</code> to at least <code>65,535</code></li><li><code>unsigned short</code> will range from <code>0</code> to at least <code>65,535</code></li><li><code>unsigned long</code> will range from <code>0</code> to at least <code>4,294,967,295</code></li></ul><h3 id="the-problem-with-overflow">The problem with overflow</h3><p>Given all those limits, a question might come up: how can we make sure our numbers do not exceed the limit? And what happens if we do exceed the limit?</p><p>If you have an <code>unsigned int</code> number at 255, and you increment it, you'll get 256 in return. As expected. If you have an <code>unsigned char</code> number at 255, and you increment it, you'll get 0 in return. It resets starting from the initial possible value.</p><p>If you have a <code>unsigned char</code> number at 255 and you add 10 to it, you'll get the number <code>9</code>:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  unsigned char j = 255;
+  j = j + 10;
+  printf("%u", j); /* 9 */
+}
+</code></pre><p>If you don't have a signed value, the behavior is undefined. It will basically give you a huge number which can vary, like in this case:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  char j = 127;
+  j = j + 10;
+  printf("%u", j); /* 4294967177 */
+}
+</code></pre><p>In other words, C does not protect you from going over the limits of a type. You need to take care of this yourself.</p><h3 id="warnings-when-declaring-the-wrong-type">Warnings when declaring the wrong type</h3><p>When you declare the variable and initialize it with the wrong value, the <code>gcc</code> compiler (the one you're probably using) should warn you:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  char j = 1000;
+}
+</code></pre><pre><code>hello.c:4:11: warning: implicit conversion 
+  from 'int' to
+      'char' changes value from 1000 to -24
+      [-Wconstant-conversion]
+        char j = 1000;
+             ~   ^~~~
+1 warning generated.
+</code></pre><p>And it also warns you in direct assignments:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  char j;
+  j = 1000;
+}
+</code></pre><p>But not if you increase the number using, for example, <code>+=</code>:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  char j = 0;
+  j += 1000;
+}
+</code></pre><h3 id="floating-point-numbers">Floating point numbers</h3><p>Floating point types can represent a much larger set of values than integers can, and can also represent fractions, something that integers can't do.</p><p>Using floating point numbers, we represent numbers as decimal numbers times powers of 10.</p><p>You might see floating point numbers written as</p><ul><li><code>1.29e-3</code></li><li><code>-2.3e+5</code></li></ul><p>and in other seemingly weird ways.</p><p>The following types:</p><ul><li><code>float</code></li><li><code>double</code></li><li><code>long double</code></li></ul><p>are used to represent numbers with decimal points (floating point types). All can represent both positive and negative numbers.</p><p>The minimum requirements for any C implementation is that <code>float</code> can represent a range between 10^-37 and 10^+37, and is typically implemented using 32 bits. <code>double</code> can represent a bigger set of numbers. <code>long double</code> can hold even more numbers.</p><p>The exact figures, as with integer values, depend on the implementation.</p><p>On a modern Mac, a <code>float</code> is represented in 32 bits, and has a precision of 24 significant bits. 8 bits are used to encode the exponent. </p><p>A <code>double</code> number is represented in 64 bits, with a precision of 53 significant bits. 11 bits are used to encode the exponent. </p><p>The type <code>long double</code> is represented in 80 bits, has a precision of 64 significant bits. 15 bits are used to encode the exponent.</p><p>On your specific computer, how can you determine the specific size of the types? You can write a program to do that:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  printf("char size: %lu bytes\n", sizeof(char));
+  printf("int size: %lu bytes\n", sizeof(int));
+  printf("short size: %lu bytes\n", sizeof(short));
+  printf("long size: %lu bytes\n", sizeof(long));
+  printf("float size: %lu bytes\n", sizeof(float));
+  printf("double size: %lu bytes\n", 
+    sizeof(double));
+  printf("long double size: %lu bytes\n", 
+    sizeof(long double));
+}
+</code></pre><p>In my system, a modern Mac, it prints:</p><pre><code>char size: 1 bytes
+int size: 4 bytes
+short size: 2 bytes
+long size: 8 bytes
+float size: 4 bytes
+double size: 8 bytes
+long double size: 16 bytes
+</code></pre><h2 id="constants">Constants</h2><p>Let's now talk about constants.</p><p>A constant is declared similarly to variables, except it is prepended with the <code>const</code> keyword, and you always need to specify a value.</p><p>Like this:</p><pre><code class="language-c">const int age = 37;
+</code></pre><p>This is perfectly valid C, although it is common to declare constants uppercase, like this:</p><pre><code class="language-c">const int AGE = 37;
+</code></pre><p>It's just a convention, but one that can greatly help you while reading or writing a C program as it improves readability. Uppercase name means constant, lowercase name means variable.</p><p>A constant name follows the same rules for variable names: can contain any uppercase or lowercase letter, can contain digits and the underscore character, but it can't start with a digit. <code>AGE</code> and <code>Age10</code> are valid variable names, <code>1AGE</code> is not.</p><p>Another way to define constants is by using this syntax:</p><pre><code class="language-c">#define AGE 37
+</code></pre><p>In this case, you don't need to add a type, and you don't also need the <code>=</code> equal sign, and you omit the semicolon at the end.</p><p>The C compiler will infer the type from the value specified, at compile time.</p><h2 id="operators">Operators</h2><p>C offers us a wide variety of operators that we can use to operate on data.</p><p>In particular, we can identify various groups of operators:</p><ul><li>arithmetic operators</li><li>comparison operators</li><li>logical operators</li><li>compound assignment operators</li><li>bitwise operators</li><li>pointer operators</li><li>structure operators</li><li>miscellaneous operators</li></ul><p>In this section I'm going to detail all of them, using 2 imaginary variables <code>a</code> and <code>b</code> as examples.</p><p>I am keeping bitwise operators, structure operators and pointer operators out of this list, to keep things simpler</p><h3 id="arithmetic-operators">Arithmetic operators</h3><p>In this macro group I am going to separate binary operators and unary operators.</p><!--kg-card-begin: markdown--><p>Binary operators work using two operands:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>Assignment</td>
+<td><code>a = b</code></td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>Addition</td>
+<td><code>a + b</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtraction</td>
+<td><code>a - b</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplication</td>
+<td><code>a * b</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Division</td>
+<td><code>a / b</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Modulo</td>
+<td><code>a % b</code></td>
+</tr>
+</tbody>
+</table>
+<p>Unary operators only take one operand:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Unary plus</td>
+<td><code>+a</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Unary minus</td>
+<td><code>-a</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td>Increment</td>
+<td><code>a++</code> or <code>++a</code></td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td>Decrement</td>
+<td><code>a--</code> or <code>--a</code></td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: markdown--><p>The difference between <code>a++</code> and <code>++a</code> is that <code>a++</code> increments the <code>a</code> variable after using it. <code>++a</code> increments the <code>a</code> variable before using it.</p><p>For example:</p><pre><code class="language-c">int a = 2;
+int b;
+b = a++ /* b is 2, a is 3 */
+b = ++a /* b is 4, a is 4 */
+</code></pre><p>The same applies to the decrement operator.</p><h3 id="comparison-operators">Comparison operators</h3><!--kg-card-begin: markdown--><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Equal operator</td>
+<td><code>a == b</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Not equal operator</td>
+<td><code>a != b</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Bigger than</td>
+<td><code>a &gt; b</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>a &lt; b</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Bigger than or equal to</td>
+<td><code>a &gt;= b</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>a &lt;= b</code></td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: markdown--><h3 id="logical-operators">Logical operators</h3><ul><li><code>!</code> NOT (example: <code>!a</code>)</li><li><code>&amp;&amp;</code> AND (example: <code>a &amp;&amp; b</code>)</li><li><code>||</code> OR (example: <code>a || b</code>)</li></ul><p>Those operators are great when working with boolean values.</p><h3 id="compound-assignment-operators">Compound assignment operators</h3><p>Those operators are useful to perform an assignment and at the same time perform an arithmetic operation:</p><!--kg-card-begin: markdown--><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+=</code></td>
+<td>Addition assignment</td>
+<td><code>a += b</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>Subtraction assignment</td>
+<td><code>a -= b</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>Multiplication assignment</td>
+<td><code>a *= b</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>Division assignment</td>
+<td><code>a /= b</code></td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td>Modulo assignment</td>
+<td><code>a %= b</code></td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: markdown--><h3 id="the-ternary-operator">The ternary operator</h3><p>The ternary operator is the only operator in C that works with 3 operands, and it’s a short way to express conditionals.</p><p>This is how it looks:</p><pre><code class="language-c">&lt;condition&gt; ? &lt;expression&gt; : &lt;expression&gt;
+</code></pre><p>Example:</p><pre><code class="language-c">a ? b : c
+</code></pre><p>If <code>a</code> is evaluated to <code>true</code>, then the <code>b</code> statement is executed, otherwise <code>c</code> is.</p><p>The ternary operator is functionality-wise same as an if/else conditional, except it is shorter to express and it can be inlined into an expression.</p><h3 id="sizeof">sizeof</h3><p>The <code>sizeof</code> operator returns the size of the operand you pass. You can pass a variable, or even a type.</p><p>Example usage:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  int age = 37;
+  printf("%ld\n", sizeof(age));
+  printf("%ld", sizeof(int));
+}
+</code></pre><h3 id="operator-precedence">Operator precedence</h3><p>With all those operators (and more, which I haven't covered in this post, including bitwise, structure operators, and pointer operators), we must pay attention when using them together in a single expression.</p><p>Suppose we have this operation:</p><pre><code class="language-c">int a = 2;
+int b = 4;
+int c = b + a * a / b - a;
+</code></pre><p>What's the value of <code>c</code>? Do we get the addition being executed before the multiplication and the division?</p><p>There is a set of rules that help us solve this puzzle.</p><p>In order from less precedence to more precedence, we have:</p><ul><li>the <code>=</code> assignment operator</li><li>the <code>+</code> and <code>-</code> <strong>binary</strong> operators</li><li>the <code>*</code> and <code>/</code> operators</li><li>the <code>+</code> and <code>-</code> unary operators</li></ul><p>Operators also have an associativity rule, which is always left to right except for the unary operators and the assignment.</p><p>In:</p><pre><code class="language-c">int c = b + a * a / b - a;
+</code></pre><p>We first execute <code>a * a / b</code>, which, due to being left-to-right, we can separate into <code>a * a</code> and the result <code>/ b</code>: <code>2 * 2 = 4</code>, <code>4 / 4 = 1</code>.</p><p>Then we can perform the sum and the subtraction: 4 + 1 - 2. The value of <code>c</code> is <code>3</code>.</p><p>In all cases, however, I want to make sure you realize you can use parentheses to make any similar expression easier to read and comprehend.</p><p>Parentheses have higher priority over anything else.</p><p>The above example expression can be rewritten as:</p><pre><code class="language-c">int c = b + ((a * a) / b) - a;
+</code></pre><p>and we don't have to think about it that much.</p><h2 id="conditionals">Conditionals</h2><p>Any programming language provides the programmers the ability to perform choices.</p><p>We want to do X in some cases, and Y in other cases.</p><p>We want to check data, and make choices based on the state of that data.</p><p>C provides us 2 ways to do so.</p><p>The first is the <code>if</code> statement, with its <code>else</code> helper, and the second is the <code>switch</code> statement.</p><h3 id="if">if</h3><p>In an <code>if</code> statement, you can check for a condition to be true, and then execute the block provided in the curly brackets:</p><pre><code class="language-c">int a = 1;
+
+if (a == 1) {
+  /* do something */
+}
+</code></pre><p>You can append an <code>else</code> block to execute a different block if the original condition turns out to be false:</p><pre><code class="language-c">int a = 1;
+
+if (a == 2) {
+  /* do something */
+} else {
+  /* do something else */
+}
+</code></pre><p>Beware of one common source of bugs - always use the comparison operator <code>==</code> in comparisons, and not the assignment operator <code>=</code>. If you don't, the <code>if</code> conditional check will always be true, unless the argument is <code>0</code>, for example if you do:</p><pre><code class="language-c">int a = 0;
+
+if (a = 0) {
+  /* never invoked */
+}
+</code></pre><p>Why does this happen? Because the conditional check will look for a boolean result (the result of a comparison), and the <code>0</code> number always equates to a false value. Everything else is true, including negative numbers.</p><p>You can have multiple <code>else</code> blocks by stacking together multiple <code>if</code> statements:</p><pre><code class="language-c">int a = 1;
+
+if (a == 2) {
+  /* do something */
+} else if (a == 1) {
+  /* do something else */
+} else {
+  /* do something else again */
+}
+</code></pre><h3 id="switch">switch</h3><p>If you need to do too many if / else / if blocks to perform a check, perhaps because you need to check the exact value of a variable, then <code>switch</code> can be very useful to you.</p><p>You can provide a variable as condition, and a series of <code>case</code> entry points for each value you expect:</p><pre><code class="language-c">int a = 1;
+
+switch (a) {
+  case 0:
+    /* do something */
+    break;
+  case 1:
+    /* do something else */
+    break;
+  case 2:
+    /* do something else */
+    break;
+}
+</code></pre><p>We need a <code>break</code> keyword at the end of each case to avoid the next case being executed when the one before ends. This "cascade" effect can be useful in some creative ways.</p><p>You can add a "catch-all" case at the end, labeled <code>default</code>:</p><pre><code class="language-c">int a = 1;
+
+switch (a) {
+  case 0:
+    /* do something */
+    break;
+  case 1:
+    /* do something else */
+    break;
+  case 2:
+    /* do something else */
+    break;
+  default:
+    /* handle all the other cases */
+    break;
+}
+</code></pre><h2 id="loops">Loops</h2><p>C offers us three ways to perform a loop: <strong>for loops</strong>, <strong>while loops</strong> and <strong>do while loops</strong>. They all allow you to iterate over arrays, but with a few differences. Let's see them in detail.</p><h3 id="for-loops">For loops</h3><p>The first and probably most common way to perform a loop is <strong>for loops</strong>.</p><p>Using the <code>for</code> keyword we can define the <em>rules</em> of the loop up front, and then provide the block that is going to be executed repeatedly.</p><p>Like this:</p><pre><code class="language-c">for (int i = 0; i &lt;= 10; i++) {
+  /* instructions to be repeated */
+}
+</code></pre><p>The <code>(int i = 0; i &lt;= 10; i++)</code> block contains 3 parts of the looping details:</p><ul><li>the initial condition (<code>int i = 0</code>)</li><li>the test (<code>i &lt;= 10</code>)</li><li>the increment (<code>i++</code>)</li></ul><p>We first define a loop variable, in this case named <code>i</code>. <code>i</code> is a common variable name to be used for loops, along with <code>j</code> for nested loops (a loop inside another loop). It's just a convention.</p><p>The variable is initialized at the 0 value, and the first iteration is done. Then it is incremented as the increment part says (<code>i++</code> in this case, incrementing by 1), and all the cycle repeats until you get to the number 10.</p><p>Inside the loop main block we can access the variable <code>i</code> to know at which iteration we are. This program should print <code>0 1 2 3 4 5 5 6 7 8 9 10</code>:</p><pre><code class="language-c">for (int i = 0; i &lt;= 10; i++) {
+  /* instructions to be repeated */
+  printf("%u ", i);
+}
+</code></pre><p>Loops can also start from a high number, and go a lower number, like this:</p><pre><code class="language-c">for (int i = 10; i &gt; 0; i--) {
+  /* instructions to be repeated */
+}
+</code></pre><p>You can also increment the loop variable by 2 or another value:</p><pre><code class="language-c">for (int i = 0; i &lt; 1000; i = i + 30) {
+  /* instructions to be repeated */
+}
+</code></pre><h3 id="while-loops">While loops</h3><p><strong>While loops</strong> is simpler to write than a <code>for</code> loop, because it requires a bit more work on your part.</p><p>Instead of defining all the loop data up front when you start the loop, like you do in the <code>for</code> loop, using <code>while</code> you just check for a condition:</p><pre><code class="language-c">while (i &lt; 10) {
+
+}
+</code></pre><p>This assumes that <code>i</code> is already defined and initialized with a value.</p><p>And this loop will be an <strong>infinite loop</strong> unless you increment the <code>i</code> variable at some point inside the loop. An infinite loop is bad because it will block the program, allowing nothing else to happen.</p><p>This is what you need for a "correct" while loop:</p><pre><code class="language-c">int i = 0;
+
+while (i &lt; 10) {
+  /* do something */
+
+  i++;
+}
+</code></pre><p>There's one exception to this, and we'll see it in one minute. Before, let me introduce <code>do while</code>.</p><h3 id="do-while-loops">Do while loops</h3><p>While loops are great, but there might be times when you need to do one particular thing: you want to always execute a block, and then <em>maybe</em> repeat it.</p><p>This is done using the <code>do while</code> keyword. In a way it's very similar to a <code>while</code> loop, but slightly different:</p><pre><code class="language-c">int i = 0;
+
+do {
+  /* do something */
+
+  i++;
+} while (i &lt; 10);
+</code></pre><p>The block that contains the <code>/* do something */</code> comment is always executed at least once, regardless of the condition check at the bottom.</p><p>Then, until <code>i</code> is less than 10, we'll repeat the block.</p><h3 id="breaking-out-of-a-loop-using-break">Breaking out of a loop using break</h3><p>In all the C loops we have a way to break out of a loop at any point &nbsp;in time, immediately, regardless of the conditions set for the loop.</p><p>This is done using the <code>break</code> keyword.</p><p>This is useful in many cases. You might want to check for the value of a variable, for example:</p><pre><code class="language-c">for (int i = 0; i &lt;= 10; i++) {
+  if (i == 4 &amp;&amp; someVariable == 10) {
+    break;
+  }
+}
+</code></pre><p>Having this option to break out of a loop is particularly interesting for <code>while</code> loops (and <code>do while</code> too), because we can create seemingly infinite loops that end when a &nbsp;condition occurs. You define this inside the loop block:</p><pre><code class="language-c">int i = 0;
+while (1) {
+  /* do something */
+
+  i++;
+  if (i == 10) break;
+}
+</code></pre><p>It's rather common to have this kind of loop in C.</p><h2 id="arrays">Arrays</h2><p>An array is a variable that stores multiple values.</p><p>Every value in the array, in C, must have the <strong>same type</strong>. This means you will have arrays of <code>int</code> values, arrays of <code>double</code> values, and more.</p><p>You can define an array of <code>int</code> values like this:</p><pre><code class="language-c">int prices[5];
+</code></pre><p>You must always specify the size of the array. C does not provide dynamic arrays out of the box (you have to use a data structure like a linked list for that).</p><p>You can use a constant to define the size:</p><pre><code class="language-c">const int SIZE = 5;
+int prices[SIZE];
+</code></pre><p>You can initialize an array at definition time, like this:</p><pre><code class="language-c">int prices[5] = { 1, 2, 3, 4, 5 };
+</code></pre><p>But you can also assign a value after the definition, in this way:</p><pre><code class="language-c">int prices[5];
+
+prices[0] = 1;
+prices[1] = 2;
+prices[2] = 3;
+prices[3] = 4;
+prices[4] = 5;
+</code></pre><p>Or, more practical, using a loop:</p><pre><code class="language-c">int prices[5];
+
+for (int i = 0; i &lt; 5; i++) {
+  prices[i] = i + 1;
+}
+</code></pre><p>And you can reference an item in the array by using square brackets after the array variable name, adding an integer to determine the index value. Like this:</p><pre><code class="language-c">prices[0]; /* array item value: 1 */
+prices[1]; /* array item value: 2 */
+</code></pre><p>Array indexes start from 0, so an array with 5 items, like the <code>prices</code> array above, will have items ranging from <code>prices[0]</code> to <code>prices[4]</code>.</p><p>The interesting thing about C arrays is that all elements of an array are stored sequentially, one right after another. Not something that normally happens with higher-level programming languages.</p><p>Another interesting thing is this: the variable name of the array, <code>prices</code> in the above example, is a <strong>pointer</strong> to the first element of the array. As such it can be used like a normal pointer.</p><p>More on pointers soon.</p><h2 id="strings">Strings</h2><p>In C, strings are one special kind of array: a string is an array of <code>char</code> values:</p><pre><code class="language-c">char name[7];
+</code></pre><p>I introduced the <code>char</code> type when I introduced types, but in short it is commonly used to store letters of the ASCII chart.</p><p>A string can be initialized like you initialize a normal array:</p><pre><code class="language-c">char name[7] = { "F", "l", "a", "v", "i", "o" };
+</code></pre><p>Or more conveniently with a string literal (also called string constant), a sequence of characters enclosed in double quotes:</p><pre><code class="language-c">char name[7] = "Flavio";
+</code></pre><p>You can print a string via <code>printf()</code> using <code>%s</code>:</p><pre><code class="language-c">printf("%s", name);
+</code></pre><p>Do you notice how "Flavio" is 6 chars long, but I defined an array of length 7? Why? This is because the last character in a string must be a &nbsp;<code>0</code> value, the string terminator, and we must make space for it.</p><p>This is important to keep in mind especially when manipulating strings.</p><p>Speaking of manipulating strings, there's one important standard library that is provided by C: <code>string.h</code>.</p><p>This library is essential because it abstracts many of the low level details of working with strings, and provides us with a set of useful functions.</p><p>You can load the library in your program by adding on top:</p><pre><code class="language-c">#include &lt;string.h&gt;
+</code></pre><p>And once you do that, you have access to:</p><ul><li><code>strcpy()</code> to copy a string over another string</li><li><code>strcat()</code> to append a string to another string</li><li><code>strcmp()</code> to compare two strings for equality</li><li><code>strncmp()</code> to compare the first <code>n</code> characters of two strings</li><li><code>strlen()</code> to calculate the length of a string</li></ul><p>and many, many more.</p><h2 id="pointers">Pointers</h2><p>Pointers are one of the most confusing/challenging parts of C, in my opinion. Especially if you are new to programming, but also if you come from a higher level programming language like Python or JavaScript.</p><p>In this section I want to introduce them in the simplest yet not-dumbed-down way possible.</p><p>A pointer is the address of a block of memory that contains a variable.</p><p>When you declare an integer number like this:</p><pre><code class="language-c">int age = 37;
+</code></pre><p>We can use the <code>&amp;</code> operator to get the value of the address in memory of a variable:</p><pre><code class="language-c">printf("%p", &amp;age); /* 0x7ffeef7dcb9c */
+</code></pre><p>I used the <code>%p</code> format specified in <code>printf()</code> to print the address value.</p><p>We can assign the address to a variable:</p><pre><code class="language-c">int *address = &amp;age;
+</code></pre><p>Using <code>int *address</code> in the declaration, we are not declaring an integer variable, but rather a <strong>pointer to an integer</strong>.</p><p>We can use the pointer operator <code>*</code> to get the value of the variable an address is pointing to:</p><pre><code class="language-c">int age = 37;
+int *address = &amp;age;
+printf("%u", *address); /* 37 */
+</code></pre><p>This time we are using the pointer operator again, but since it's not a declaration this time it means "the value of the variable this pointer points to".</p><p>In this example we declare an <code>age</code> variable, and we use a pointer to initialize the value:</p><pre><code class="language-c">int age;
+int *address = &amp;age;
+*address = 37;
+printf("%u", *address);
+</code></pre><p>When working with C, you'll find that a lot of things are built on top of this simple concept. So make sure you familiarize with it a bit by running the above examples on your own.</p><p>Pointers are a great opportunity because they force us to think about memory addresses and how data is organized.</p><p>Arrays are one example. When you declare an array:</p><pre><code class="language-c">int prices[3] = { 5, 4, 3 };
+</code></pre><p>The <code>prices</code> variable is actually a pointer to the first item of the array. You can get the value of the first item using this <code>printf()</code> function in this case:</p><pre><code class="language-c">printf("%u", *prices); /* 5 */
+</code></pre><p>The cool thing is that we can get the second item by adding 1 to the <code>prices</code> pointer:</p><pre><code class="language-c">printf("%u", *(prices + 1)); /* 4 */
+</code></pre><p>And so on for all the other values.</p><p>We can also do many nice string manipulation operations, since strings are arrays under the hood.</p><p>We also have many more applications, including passing the reference of an object or a function around to avoid consuming more resources to copy it.</p><h2 id="functions">Functions</h2><p>Functions are the way we can structure our code into subroutines that we can:</p><ol><li>give a name to</li><li>call when we need them</li></ol><p>Starting from your very first program, a "Hello, World!", you immediately make use of C functions:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, World!");
+}
+</code></pre><p>The <code>main()</code> function is a very important function, as it's the entry point for a C program.</p><p>Here's another function:</p><pre><code class="language-c">void doSomething(int value) {
+    printf("%u", value);
+}
+</code></pre><p>Functions have 4 important aspects:</p><ol><li>they have a name, so we can invoke ("call") them later</li><li>they specify a return value</li><li>they can have arguments</li><li>they have a body, wrapped in curly braces</li></ol><p>The function body is the set of instructions that are executed any time we invoke a function.</p><p>If the function has no return value, you can use the keyword <code>void</code> before the function name. Otherwise you specify the function return value type (<code>int</code> for an integer, <code>float</code> for a floating point value, <code>const char *</code> for a string, etc).</p><p>You cannot return more than one value from a function.</p><p>A function can have arguments. They are optional. If it does not have them, inside the parentheses we insert <code>void</code>, like this:</p><pre><code class="language-c">void doSomething(void) {
+   /* ... */
+}
+</code></pre><p>In this case, when we invoke the function we'll call it with nothing in the parentheses:</p><pre><code class="language-c">doSomething();
+</code></pre><p>If we have one parameter, we specify the type and the name of the parameter, like this:</p><pre><code class="language-c">void doSomething(int value) {
+   /* ... */
+}
+</code></pre><p>When we invoke the function, we'll pass that parameter in the parentheses, like this:</p><pre><code class="language-c">doSomething(3);
+</code></pre><p>We can have multiple parameters, and if so we separate them using a comma, both in the declaration and in the invocation:</p><pre><code class="language-c">void doSomething(int value1, int value2) {
+   /* ... */
+}
+
+doSomething(3, 4);
+</code></pre><p>Parameters are passed by <strong>copy</strong>. This means that if you modify <code>value1</code>, its value is modified locally. The value outside of the function, where it was passed in the invocation, does not change.</p><p>If you pass a <strong>pointer</strong> as a parameter, you can modify that variable value because you can now access it directly using its memory address.</p><p>You can't define a default value for a parameter. C++ can do that (and so Arduino Language programs can), but C can't.</p><p>Make sure you define the function before calling it, or the compiler will raise a warning and an error:</p><pre><code>➜  ~ gcc hello.c -o hello; ./hello
+hello.c:13:3: warning: implicit declaration of
+      function 'doSomething' is invalid in C99
+      [-Wimplicit-function-declaration]
+  doSomething(3, 4);
+  ^
+hello.c:17:6: error: conflicting types for
+      'doSomething'
+void doSomething(int value1, char value2) {
+     ^
+hello.c:13:3: note: previous implicit declaration
+      is here
+  doSomething(3, 4);
+  ^
+1 warning and 1 error generated.
+</code></pre><p>The warning you get regards the ordering, which I already mentioned.</p><p>The error is about another thing, related. Since C does not "see" the function declaration before the invocation, it must make assumptions. And it assumes the function to return <code>int</code>. The function however returns <code>void</code>, hence the error.</p><p>If you change the function definition to:</p><pre><code class="language-c">int doSomething(int value1, int value2) {
+  printf("%d %d\n", value1, value2);
+  return 1;
+}
+</code></pre><p>you'd just get the warning, and not the error:</p><pre><code>➜  ~ gcc hello.c -o hello; ./hello
+hello.c:14:3: warning: implicit declaration of
+      function 'doSomething' is invalid in C99
+      [-Wimplicit-function-declaration]
+  doSomething(3, 4);
+  ^
+1 warning generated.
+</code></pre><p>In any case, make sure you declare the function before using it. Either move the function up, or add the function prototype in a header file.</p><p>Inside a function, you can declare variables.</p><pre><code class="language-c">void doSomething(int value) {
+  int doubleValue = value * 2;
+}
+</code></pre><p>A variable is created at the point of invocation of the function and is destroyed when the function ends. It's not visible from the outside.</p><p>Inside a function, you can call the function itself. This is called <strong>recursion</strong> and it's something that offers peculiar opportunities.</p><h2 id="input-and-output">Input and output</h2><p>C is a small language, and the "core" of C does not include any Input/Output (I/O) functionality.</p><p>This is not something unique to C, of course. It's common for the language core to be agnostic of I/O.</p><p>In the case of C, Input/Output is provided to us by the C Standard Library via a set of functions defined in the <code>stdio.h</code> header file.</p><p>You can import this library using:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+</code></pre><p>on top of your C file.</p><p>This library provides us with, among many other functions:</p><ul><li><code>printf()</code></li><li><code>scanf()</code></li><li><code>sscanf()</code></li><li><code>fgets()</code></li><li><code>fprintf()</code></li></ul><p>Before describing what those functions do, I want to take a minute to talk about <strong>I/O streams</strong>.</p><p>We have 3 kinds of I/O streams in C:</p><ul><li><code>stdin</code> (standard input)</li><li><code>stdout</code> (standard output)</li><li><code>stderr</code> (standard error)</li></ul><p>With I/O functions we always work with streams. A stream is a high level interface that can represent a device or a file. From the C standpoint, we don't have any difference in reading from a file or reading from the command line: it's an I/O stream in any case.</p><p>That's one thing to keep in mind.</p><p>Some functions are designed to work with a specific stream, like <code>printf()</code>, which we use to print characters to <code>stdout</code>. Using its more general counterpart <code>fprintf()</code>, we can specify which stream to write to.</p><p>Since I started talking about <code>printf()</code>, let's introduce it now.</p><p><code>printf()</code> is one of the first functions you'll use when learning C programming.</p><p>In its simplest usage form, you pass it a string literal:</p><pre><code class="language-c">printf("hey!");
+</code></pre><p>and the program will print the content of the string to the screen.</p><p>You can print the value of a variable. But it's a bit tricky because you need to add a special character, a placeholder, which changes depending on the type of the variable. For example we use <code>%d</code> for a signed decimal integer digit:</p><pre><code class="language-c">int age = 37;
+
+printf("My age is %d", age);
+</code></pre><p>We can print more than one variable by using commas:</p><pre><code class="language-c">int age_yesterday = 37;
+int age_today = 36;
+
+printf("Yesterday my age was %d and today is %d", age_yesterday, age_today);
+</code></pre><p>There are other format specifiers like <code>%d</code>:</p><ul><li><code>%c</code> for a char</li><li><code>%s</code> for a char</li><li><code>%f</code> for floating point numbers</li><li><code>%p</code> for pointers</li></ul><p>and many more.</p><p>We can use escape characters in <code>printf()</code>, like <code>\n</code> which we can use to make the output create a new line.</p><h3 id="scanf-"><code>scanf()</code></h3><p><code>printf()</code> is used as an output function. I want to introduce an input function now, so we can say we can do all the I/O thing: <code>scanf()</code>.</p><p>This function is used to get a value from the user running the program, from the command line.</p><p>We must first define a variable that will hold the value we get from the input:</p><pre><code class="language-c">int age;
+</code></pre><p>Then we call <code>scanf()</code> with 2 arguments: the format (type) of the variable, and the address of the variable:</p><pre><code class="language-c">scanf("%d", &amp;age);
+</code></pre><p>If we want to get a string as input, remember that a string name is a pointer to the first character, so you don't need the <code>&amp;</code> character before it:</p><pre><code class="language-c">char name[20];
+scanf("%s", name);
+</code></pre><p>Here's a little program that uses both <code>printf()</code> and <code>scanf()</code>:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  char name[20];
+  printf("Enter your name: ");
+  scanf("%s", name);
+  printf("you entered %s", name);
+}
+</code></pre><h2 id="variable-scope">Variable scope</h2><p>When you define a variable in a C program, depending on where you declare it, it will have a different <strong>scope</strong>.</p><p>This means that it will be available in some places, but not in others.</p><p>The position determines 2 types of variables:</p><ul><li><strong>global variables</strong></li><li><strong>local variables</strong></li></ul><p>This is the difference: a variable declared inside a function is a local variable, like this:</p><pre><code class="language-c">int main(void) {
+  int age = 37;
+}
+</code></pre><p>Local variables are only accessible from within the function, and when the function ends they stop their existence. They are cleared from the memory (with some exceptions).</p><p>A variable defined outside a function is a global variable, like in this example:</p><pre><code class="language-c">int age = 37;
+
+int main(void) {
+  /* ... */
+}
+</code></pre><p>Global variables are accessible from any function of the program, and they are available for the whole execution of the program, until it ends.</p><p>I mentioned that local variables are not available any more after the function ends.</p><p>The reason is that local variables are declared on the <strong>stack</strong>, by default, unless you explicitly allocate them on the heap using pointers. But then you have to manage the memory yourself.</p><h2 id="static-variables">Static variables</h2><p>Inside a function, you can initialize a <strong>static variable</strong> using the <code>static</code> keyword.</p><p>I said "inside a function" because global variables are static by default, so there's no need to add the keyword.</p><p>What's a static variable? A static variable is initialized to 0 if no initial value is specified, and it retains the value across function calls.</p><p>Consider this function:</p><pre><code class="language-c">int incrementAge() {
+  int age = 0;
+  age++;
+  return age;
+}
+</code></pre><p>If we call <code>incrementAge()</code> once, we'll get <code>1</code> as the return value. If we call it more than once, we'll always get 1 back, because <code>age</code> is a local variable and it's re-initialized to <code>0</code> on every single function call.</p><p>If we change the function to:</p><pre><code class="language-c">int incrementAge() {
+  static int age = 0;
+  age++;
+  return age;
+}
+</code></pre><p>Now every time we call this function, we'll get an incremented value:</p><pre><code class="language-c">printf("%d\n", incrementAge());
+printf("%d\n", incrementAge());
+printf("%d\n", incrementAge());
+</code></pre><p>will give us</p><pre><code>1
+2
+3
+</code></pre><p>We can also omit initializing <code>age</code> to 0 in <code>static int age = 0;</code>, and just write <code>static int age;</code> because static variables are automatically set to 0 when created.</p><p>We can also have static arrays. In this case, each single item in the array is initialized to 0:</p><pre><code class="language-c">int incrementAge() {
+  static int ages[3];
+  ages[0]++;
+  return ages[0];
+}
+</code></pre><h2 id="global-variables">Global variables</h2><p>In this section I want to talk more about the difference between <strong>global and local variables</strong>.</p><p>A <strong>local variable</strong> is defined inside a function, and it's only available inside that function.</p><p>Like this:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+  char j = 0;
+  j += 10;
+  printf("%u", j); //10
+}
+</code></pre><p><code>j</code> is not available anywhere outside the <code>main</code> function.</p><p>A <strong>global variable</strong> is defined outside of any function, like this:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+char i = 0;
+
+int main(void) {
+  i += 10;
+  printf("%u", i); //10
+}
+</code></pre><p>A global variable can be accessed by any function in the program. &nbsp;Access is not limited to reading the value: the variable can be updated by any function.</p><p>Due to this, global variables are one way we have of sharing the same data between functions.</p><p>The main difference with local variables is that the memory allocated for variables is freed once the function ends.</p><p>Global variables are only freed when the program ends.</p><h2 id="type-definitions">Type definitions</h2><p>The <code>typedef</code> keyword in C allows you to defined new types.</p><p>Starting from the built-in C types, we can create our own types, using this syntax:</p><pre><code class="language-c">typedef existingtype NEWTYPE
+</code></pre><p>The new type we create is usually, by convention, uppercase.</p><p>This it to distinguish it more easily, and immediately recognize it as type.</p><p>For example we can define a new <code>NUMBER</code> type that is an <code>int</code>:</p><pre><code class="language-c">typedef int NUMBER
+</code></pre><p>and once you do so, you can define new <code>NUMBER</code> variables:</p><pre><code class="language-c">NUMBER one = 1;
+</code></pre><p>Now you might ask: why? Why not just use the built-in type <code>int</code> instead?</p><p>Well, <code>typedef</code> gets really useful when paired with two things: enumerated types and structures.</p><h2 id="enumerated-types">Enumerated types</h2><p>Using the <code>typedef</code> and <code>enum</code> keywords we can define a type that can have either one value or another.</p><p>It's one of the most important uses of the <code>typedef</code> keyword.</p><p>This is the syntax of an enumerated type:</p><pre><code class="language-c">typedef enum {
+  //...values
+} TYPENAME;
+</code></pre><p>The enumerated type we create is usually, by convention, uppercase.</p><p>Here is a simple example:</p><pre><code class="language-c">typedef enum {
+  true,
+  false
+} BOOLEAN;
+</code></pre><p>C comes with a <code>bool</code> type, so this example is not really practical, but you get the idea.</p><p>Another example is to define weekdays:</p><pre><code class="language-c">typedef enum {
+  monday,  
+  tuesday,
+  wednesday,
+  thursday,
+  friday,
+  saturday,
+  sunday
+} WEEKDAY;
+</code></pre><p>Here's a simple program that uses this enumerated type:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+typedef enum {
+  monday,  
+  tuesday,
+  wednesday,
+  thursday,
+  friday,
+  saturday,
+  sunday
+} WEEKDAY;
+
+int main(void) {
+  WEEKDAY day = monday;
+
+  if (day == monday) {
+    printf("It's monday!"); 
+  } else {
+    printf("It's not monday"); 
+  }
+}
+</code></pre><p>Every item in the enum definition is paired to an integer, internally. So in this example <code>monday</code> is 0, <code>tuesday</code> is 1 and so on.</p><p>This means the conditional could have been <code>if (day == 0)</code> instead of <code>if (day == monday)</code>, but it's way simpler for us humans to reason with names rather than numbers, so it's a very convenient syntax.</p><h2 id="structures">Structures</h2><p>Using the <code>struct</code> keyword we can create complex data structures using basic C types.</p><p>A structure is a collection of values of different types. Arrays in C are limited to a type, so structures can prove to be very interesting in a lot of use cases.</p><p>This is the syntax of a structure:</p><pre><code class="language-c">struct &lt;structname&gt; {
+  //...variables
+};
+</code></pre><p>Example:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+};
+</code></pre><p>You can declare variables that have as type that structure by adding them after the closing curly bracket, before the semicolon, like this:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+} flavio;
+</code></pre><p>Or multiple ones, like this:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+} flavio, people[20];
+</code></pre><p>In this case I declare a single <code>person</code> variable named <code>flavio</code>, and an array of 20 <code>person</code> named <code>people</code>.</p><p>We can also declare variables later on, using this syntax:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+};
+
+struct person flavio;
+</code></pre><p>We can initialize a structure at declaration time:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+};
+
+struct person flavio = { 37, "Flavio" };
+</code></pre><p>and once we have a structure defined, we can access the values in it using a dot:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+};
+
+struct person flavio = { 37, "Flavio" };
+printf("%s, age %u", flavio.name, flavio.age);
+</code></pre><p>We can also change the values using the dot syntax:</p><pre><code class="language-c">struct person {
+  int age;
+  char *name;
+};
+
+struct person flavio = { 37, "Flavio" };
+
+flavio.age = 38;
+</code></pre><p>Structures are very useful because we can pass them around as function parameters, or return values, embedding various variables within them. Each variable has a label.</p><p>It's important to note that structures are <strong>passed by copy</strong>, unless of course you pass a pointer to a struct, in which case it's passed by reference.</p><p>Using <code>typedef</code> we can simplify the code when working with structures.</p><p>Let's look at an example:</p><pre><code class="language-c">typedef struct {
+  int age;
+  char *name;
+} PERSON;
+</code></pre><p>The structure we create using <code>typedef</code> is usually, by convention, uppercase.</p><p>Now we can declare new <code>PERSON</code> variables like this:</p><pre><code class="language-c">PERSON flavio;
+</code></pre><p>and we can initialize them at declaration in this way:</p><pre><code class="language-c">PERSON flavio = { 37, "Flavio" };
+</code></pre><h2 id="command-line-parameters">Command line parameters</h2><p>In your C programs, you might need to accept parameters from the command line when the command launches.</p><p>For simple needs, all you need to do to do so is change the <code>main()</code> function signature from</p><pre><code class="language-c">int main(void)
+</code></pre><p>to</p><pre><code class="language-c">int main (int argc, char *argv[])
+</code></pre><p><code>argc</code> is an integer number that contains the number of parameters that were provided in the command line.</p><p><code>argv</code> is an array of strings.</p><p>When the program starts, we are provided the arguments in those 2 parameters.</p><p>Note that there's always at least one item in the <code>argv</code> array: the name of the program</p><p>Let's take the example of the C compiler we use to run our programs, like this:</p><pre><code class="language-sh">gcc hello.c -o hello
+</code></pre><p>If this was our program, we'd have <code>argc</code> being 4 and <code>argv</code> being an array containing</p><ul><li><code>gcc</code></li><li><code>hello.c</code></li><li><code>-o</code></li><li><code>hello</code></li></ul><p>Let's write a program that prints the arguments it receives:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main (int argc, char *argv[]) {
+  for (int i = 0; i &lt; argc; i++) {
+    printf("%s\n", argv[i]);
+  }
+}
+</code></pre><p>If the name of our program is <code>hello</code> and we run it like this: <code>./hello</code>, we'd get this as output:</p><pre><code>./hello
+</code></pre><p>If we pass some random parameters, like this: <code>./hello a b c</code> we'd get this output to the terminal:</p><pre><code>./hello
+a
+b
+c
+</code></pre><p>This system works great for simple needs. For more complex needs, there are commonly used packages like <strong>getopt</strong>.</p><h2 id="headers-files">Headers files</h2><p>Simple programs can be put in a single file. But when your program grows larger it's impossible to keep it all in just one file.</p><p>You can move parts of a program to a separate file. Then you create a <strong>header file</strong>.</p><p>A header file looks like a normal C file, except it ends with <code>.h</code> instead of <code>.c</code>. Instead of the implementations of your functions and the other parts of a program, it holds the <strong>declarations</strong>.</p><p>You already used header files when you first used the <code>printf()</code> function, or other I/O function, and you had to type:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+</code></pre><p>to use it.</p><p><code>#include</code> is a preprocessor directive.</p><p>The preprocessor goes and looks up the <code>stdio.h</code> file in the standard library because you used brackets around it. To include your own header files, you'll use quotes, like this:</p><pre><code class="language-c">#include "myfile.h"
+</code></pre><p>The above will look up <code>myfile.h</code> in the current folder.</p><p>You can also use a folder structure for libraries:</p><pre><code class="language-c">#include "myfolder/myfile.h"
+</code></pre><p>Let's look at an example. This program calculates the years since a given year:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int calculateAge(int year) {
+  const int CURRENT_YEAR = 2020;
+  return CURRENT_YEAR - year;
+}
+
+int main(void) {
+  printf("%u", calculateAge(1983));
+}
+</code></pre><p>Suppose I want to move the <code>calculateAge</code> function to a separate file.</p><p>I create a <code>calculate_age.c</code> file:</p><pre><code class="language-c">int calculateAge(int year) {
+  const int CURRENT_YEAR = 2020;
+  return CURRENT_YEAR - year;
+}
+</code></pre><p>And a <code>calculate_age.h</code> file where I put the <em>function prototype</em>, which is the same as the function in the <code>.c</code> file, except the body:</p><pre><code class="language-c">int calculateAge(int year);
+</code></pre><p>Now in the main <code>.c</code> file we can go and remove the <code>calculateAge()</code> function definition, and we can import <code>calculate_age.h</code>, which will make the <code>calculateAge()</code> function available:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include "calculate_age.h"
+
+int main(void) {
+  printf("%u", calculateAge(1983));
+}
+</code></pre><p>Don't forget that to compile a program composed by multiple files, you need to list them all in the command line, like this:</p><pre><code class="language-sh">gcc -o main main.c calculate_age.c
+</code></pre><p>And with more complex setups, a Makefile is necessary to tell the compiler how to compile the program.</p><h2 id="the-preprocessor">The preprocessor</h2><p>The preprocessor is a tool that helps us a lot when programming with C. It is part of the C Standard, just like the language, the compiler, and the standard library.</p><p>It parses our program and makes sure that the compiler gets all the things it needs before going on with the process.</p><p>What does it do, in practice?</p><p>For example, it looks up all the header files you include with the <code>#include</code> directive.</p><p>It also looks at every constant you defined using <code>#define</code> and substitutes it with its actual value.</p><p>That's just the start. I mentioned those 2 operations because they are the most common ones. The preprocessor can do a lot more.</p><p>Did you notice <code>#include</code> and <code>#define</code> have a <code>#</code> at the beginning? That's common to all the preprocessor directives. If a line starts with <code>#</code>, that's taken care of by the preprocessor.</p><h3 id="conditionals-1">Conditionals</h3><p>One of the things we can do is to use conditionals to change how our program will be compiled, depending on the value of an expression.</p><p>For example we can check if the <code>DEBUG</code> constant is 0:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+const int DEBUG = 0;
+
+int main(void) {
+#if DEBUG == 0
+  printf("I am NOT debugging\n");
+#else
+  printf("I am debugging\n");
+#endif
+}
+</code></pre><h3 id="symbolic-constants">Symbolic constants</h3><p>We can define a <strong>symbolic constant</strong>:</p><pre><code class="language-c">#define VALUE 1
+#define PI 3.14
+#define NAME "Flavio"
+</code></pre><p>When we use NAME or PI or VALUE in our program, the preprocessor replaces its name with the value before executing the program.</p><p>Symbolic constants are very useful because we can give names to values without creating variables at compilation time.</p><h3 id="macros">Macros</h3><p>With <code>#define</code> we can also define a <strong>macro</strong>. The difference between a macro and a symbolic constant is that a macro can accept an argument and typically contains code, while a symbolic constant is a value:</p><pre><code class="language-c">#define POWER(x) ((x) * (x))
+</code></pre><p>Notice the parentheses around the arguments: this is a good practice to avoid issues when the macro is replaced in the precompilation process.</p><p>Then we can use it in our code like this:</p><pre><code class="language-c">printf("%u\n", POWER(4)); //16
+</code></pre><p>The big difference with functions is that macros do not specify the type of their arguments or return values, which might be handy in some cases.</p><p>Macros, however, are limited to one line definitions.</p><h3 id="if-defined">If defined</h3><p>We can check if a symbolic constant or a macro is defined using <code>#ifdef</code>:</p><pre><code class="language-c">#include &lt;stdio.h&gt;
+#define VALUE 1
+
+int main(void) {
+#ifdef VALUE
+  printf("Value is defined\n");
+#else
+  printf("Value is not defined\n");
+#endif
+}
+</code></pre><p>We also have <code>#ifndev</code> to check for the opposite (macro not defined).</p><p>We can also use <code>#if defined</code> and <code>#if !defined</code> to do the same task.</p><p>It's common to wrap some block of code into a block like this:</p><pre><code class="language-c">#if 0
+
+#endif
+</code></pre><p>to temporarily prevent it from running, or to use a DEBUG symbolic constant:</p><pre><code class="language-c">#define DEBUG 0
+
+#if DEBUG
+  //code only sent to the compiler
+  //if DEBUG is not 0
+#endif
+</code></pre><h3 id="predefined-symbolic-constants-you-can-use">Predefined symbolic constants you can use</h3><p>The preprocessor also defines a number of symbolic constants you can use, identified by the 2 underscores before and after the name, including:</p><ul><li><code>__LINE__</code> translates to the current line in the source code file</li><li><code>__FILE__</code> translates to the name of the file</li><li><code>__DATE__</code> translates to the compilation date, in the <code>Mmm gg aaaa</code> format</li><li><code>__TIME__</code> translates to the compilation time, in the <code>hh:mm:ss</code> format</li></ul><h2 id="conclusion">Conclusion</h2><p>Thanks a lot for reading this handbook!</p><p>I hope it will inspire you to know more about C.</p><p>For more tutorials, check out my blog <a href="https://flaviocopes.com">flaviocopes.com</a>.</p><p>Send any feedback, errata, or opinions at <a href="mailto:hey@flaviocopes.com">hey@flaviocopes.com</a></p><p>And remember: <a href="https://flaviocopes.com/page/c-handbook/">You can get a PDF and ePub version of this C Beginner's Handbook</a></p><p>You can reach me on Twitter <a href="https://twitter.com/flaviocopes">@flaviocopes</a>.</p>
+
+                        </section>
+                        
+                            <div class="sidebar">
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                                
+                            </div>
+                        
+                    </div>
+                    <hr />
+                    
+                        <div class="post-full-author-header" data-test-label="author-header-with-bio">
+                            
+                                
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w60/2021/05/flavio-copes-gravatar.jpeg 60w"
+      sizes="60px"
+      src="https://www.freecodecamp.org/news/content/images/size/w60/2021/05/flavio-copes-gravatar.jpeg"
+      class="author-profile-image"
+      alt="Flavio Copes"
+      width="250"
+      height="250"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="profile-image"
+    />
+  
+        
+
+        <section class="author-card-content ">
+            <span class="author-card-name">
+                <a href="/news/author/flavio/" data-test-label="profile-link">
+                    
+                        Flavio Copes
+                    
+                </a>
+            </span>
+            
+                
+                    <p data-test-label="default-bio">
+                        Read <a href="/news/author/flavio/">more posts</a>.
+                    </p>
+                
+            
+        </section>
+    </section>
+
+                            
+                        </div>
+                        <hr />
+                    
+
+                    
+                    
+                        
+    
+
+
+<p data-test-label="social-row-cta" class="social-row">
+    If this article was helpful, <button id="tweet-btn" class="cta-button" data-test-label="tweet-button">tweet it</button>.
+</p>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.getElementById("tweet-btn"),e=window.location,n="The%20C%20Beginner&#39;s%20Handbook%3A%20Learn%20C%20Programming%20Language%20basics%20in%20just%20a%20few%20hours".replace(/&#39;/g,"%27"),o="",i="",r=Boolean("");let a;if(r&&(o||i)){const t={originalPostAuthor:"",currentPostAuthor:"Flavio Copes"};a=encodeURIComponent(`Thank you ${o||t.originalPostAuthor} for writing this helpful article, and ${i||t.currentPostAuthor} for translating it.`)}else!r&&i&&(a=encodeURIComponent(`Thank you ${i} for writing this helpful article.`));const s=`window.open(\n    '${a?`https://twitter.com/intent/tweet?text=${a}%0A%0A${n}%0A%0A${e}`:`https://twitter.com/intent/tweet?text=${n}%0A%0A${e}`}',\n    'share-twitter',\n    'width=550, height=235'\n  ); return false;`;t.setAttribute("onclick",s)}));</script>
+
+
+                        
+
+<div class="learn-cta-row" data-test-label="learn-cta-row">
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a href="https://www.freecodecamp.org/learn/" class="cta-button" id="learn-to-code-cta" rel="noopener noreferrer" target="_blank">Get started</a>
+    </p>
+</div>
+
+                    
+                </section>
+            </article>
+            
+                <div class="banner-ad bottom">
+                    <div class="ad-container">
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+    ></ins>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        if (notAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+
+                </div>
+            
+        </div>
+    </main>
+
+
+            
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit organization (United States Federal Tax Identification Number: 82-0779546)</p>
+                <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.</p>
+                <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+                <p class="footer-donation" data-test-label="donate-text">
+                    You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank" >make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides" data-test-label="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href="https://www.freecodecamp.org/news/discord-wont-open-on-my-pc-solved-in-windows-10/" rel="noopener noreferrer" target="_blank">Discord Won&#39;t Open
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/learn-java-free-java-courses-for-beginners/" rel="noopener noreferrer" target="_blank">Learn Java Courses
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/sql-like-statement-how-to-query-sql-with-wildcard/" rel="noopener noreferrer" target="_blank">SQL Like Statement
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/file-explorer-not-responding-fixed-on-windows-10-pc/" rel="noopener noreferrer" target="_blank">File Explorer Error
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-find-in-list-how-to-find-the-index-of-an-item-or-element-in-a-list/" rel="noopener noreferrer" target="_blank">Python Find in List
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/" rel="noopener noreferrer" target="_blank">Functions in Python
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-reverse-list-how-to-reverse-a-range-or-array/" rel="noopener noreferrer" target="_blank">Python Reverse List
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-create-a-table-in-sql-postgres-and-mysql-example-query/" rel="noopener noreferrer" target="_blank">Create a Table in SQL
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/list-index-out-of-range-python-error-message-solved/" rel="noopener noreferrer" target="_blank">List Index Out of Range
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-string-replace-function-in-python-for-substring-substitution/" rel="noopener noreferrer" target="_blank">Python String.Replace()
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href="https://www.freecodecamp.org/news/c-vs-cpp-whats-the-difference/" rel="noopener noreferrer" target="_blank">C vs C++
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-json-how-to-convert-a-string-to-json/" rel="noopener noreferrer" target="_blank">Python JSON
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-a-pc-computer-definition-and-computer-basics-for-beginners/" rel="noopener noreferrer" target="_blank">What is a PC?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/computer-coding-computer-program-definition-and-code-meaning/" rel="noopener noreferrer" target="_blank">What is Coding?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/text-box-in-html-the-input-field-html-tag/" rel="noopener noreferrer" target="_blank">Text Box in HTML
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/meta-tag-in-html-what-is-metadata-and-meta-description-example/" rel="noopener noreferrer" target="_blank">Meta Tag in HTML
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/append-in-python-how-to-append-to-a-list-or-an-array/" rel="noopener noreferrer" target="_blank">Append in Python
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-not-equal-how-to-use-the-does-not-equal-operator/" rel="noopener noreferrer" target="_blank">Python Not Equal
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/the-linux-awk-command-linux-and-unix-usage-syntax-examples/" rel="noopener noreferrer" target="_blank">Linux awk Command
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/javascript-string-contains-how-to-use-js-includes/" rel="noopener noreferrer" target="_blank">JS String Contains
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href="https://www.freecodecamp.org/news/how-to-open-task-manager-in-windows-10/" rel="noopener noreferrer" target="_blank">How to Open Task Manager
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/the-design-thinking-process-explained/" rel="noopener noreferrer" target="_blank">Design Thinking Explained
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/learn-programming-free-software-development-courses-for-beginners/" rel="noopener noreferrer" target="_blank">Learn Programming Courses
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/transparent-taskbar-how-to-make-a-task-bar-transparent-in-windows-10-pc-2/" rel="noopener noreferrer" target="_blank">Make a Transparent Taskbar
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/windows-10-network-adapter-missing-how-to-install-ethernet-driver-on-pc/" rel="noopener noreferrer" target="_blank">Install Ethernet Driver PC
+                            </a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href="https://www.freecodecamp.org/news/default-constructor-in-java/" rel="noopener noreferrer" target="_blank">Default Constructor in Java
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/scanning-and-repairing-drive-how-to-fix-stuck-windows-10-pc-hard-drive/" rel="noopener noreferrer" target="_blank">Stuck Win 10 Hard Drive
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/color-shades-hex-code-and-rgb-for-gray-color-palette/" rel="noopener noreferrer" target="_blank">Color Codes for Grey Palette
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/binary-search-tree-traversal-inorder-preorder-post-order-for-bst/" rel="noopener noreferrer" target="_blank">Binary Search Tree Traversal
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/rtc-connecting-discord-how-to-fix-the-server-error/" rel="noopener noreferrer" target="_blank">RTC Connecting Discord Fix
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="col-header" data-test-label="our-nonprofit">Our Nonprofit</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                    About
+                </a>
+                <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                    Alumni Network
+                </a>
+                <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                    Open Source
+                </a>
+                <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                    Shop
+                </a>
+                <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                    Support
+                </a>
+                <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                    Sponsors
+                </a>
+                <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                    Academic Honesty
+                </a>
+                <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                    Code of Conduct
+                </a>
+                <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                    Privacy Policy
+                </a>
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                    Terms of Service
+                </a>
+                <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                    Copyright Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"731bb2585e488ad3","token":"bdb993c6dde44e178aabd9555e75e4f4","version":"2022.6.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

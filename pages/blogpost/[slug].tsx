@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import {Blog} from './../../types'
 import { useRouter } from 'next/router';
 
@@ -21,7 +20,13 @@ const Slug = () =>{
         if (!slug) return;
         getBlog(slug);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [router.isReady,])
+
+    function createMarkup(c:string) {
+        return {
+           __html: c    };
+     }; 
     
     
     return <div className=' w-full h-full  bg-bkpink-100'>
@@ -41,7 +46,8 @@ const Slug = () =>{
             }
             </div>
             <div className=' mx-20 ' >
-                {blog && blog.description}
+                
+                <div dangerouslySetInnerHTML={createMarkup( blog==null?"Loading..":blog.description)} ></div>
                 </div>
             </main>
         </div>
