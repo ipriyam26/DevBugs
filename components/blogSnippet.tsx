@@ -1,11 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import {Blog} from '../types'
 import Link from 'next/link';
 
 
-function BlogSnippets(props: { blog: Blog }) {
-  const {blog} = props;
+const BlogSnippets: React.FC<{blog: Blog}> = ({blog}) => {
+
+
 
   return (
     <div className='space-y-1'>
@@ -26,13 +27,7 @@ function BlogSnippets(props: { blog: Blog }) {
   )
 }
 
-BlogSnippets.propTypes = {
-    blog: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
-},)}
+
 
 
 export default BlogSnippets

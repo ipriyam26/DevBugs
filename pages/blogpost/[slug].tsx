@@ -1,28 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import {Blog} from './../../types'
-import { useRouter } from 'next/router';
+import { GetServerSideProps, NextPage } from 'next';
 
-const Slug = () =>{
-    const [blog, setBlog] = useState(null as Blog | null);
-    const router = useRouter();
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    let slug =  context.query.slug as string;
 
-    const getBlog = async (slug:string|null|string[]) => {
-        let data =  await fetch(`/api/getblog?${slug}`);
-        console.log(data);
-        
-        let blog:Blog = await data.json();
-        setBlog(blog);
-    }
+    let response =  await fetch(`http://localhost:3000/api/getblog?${slug}`);
+    let blog:Blog = await response.json();
 
-    useEffect(() => {
-        if (!router.isReady) return;
-        const { slug } = router.query;
-        if (!slug) return;
-        getBlog(slug);
+    
+    return {
+      props: {blog}, // will be passed to the page component as props
+    };
+  };
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [router.isReady,])
 
+const Slug:NextPage<{blog:Blog}> = (props) =>{
+
+    const {blog} = props;
     function createMarkup(c:string) {
         return {
            __html: c    };

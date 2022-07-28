@@ -8,7 +8,7 @@ import { GetServerSideProps } from 'next'
 
 
 export const  getServerSideProps:GetServerSideProps = async (context) => {
-  console.log(context);
+
   const res = await fetch("http://localhost:3000/api/blogs");
   const data: Blog[] = await res.json();
   return {
@@ -17,7 +17,6 @@ export const  getServerSideProps:GetServerSideProps = async (context) => {
 }
 
 const Home: NextPage<{data:Blog[]}> = (props) => {
-
 
   const desc: string =
     "Dev Bugs is a blog about programming and software development. It covers programming languages, software development tools, tips and tricks, and other aspects of the software development process. The blog is written by a team of experienced software developers and is aimed at helping developers of all levels improve their skills and become more productive.";
